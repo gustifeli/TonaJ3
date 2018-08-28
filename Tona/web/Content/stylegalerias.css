@@ -1,0 +1,22 @@
+/*Encabezado*/
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 0.5%; margin-bottom: 0.5%;}
+#encabezado:hover {opacity: 0.8;}
+/*Filtros*/
+.size-filter {border: 1px black solid; background: white;}
+.size-filter:active {border: 1px black solid; background: black; color: white;}
+.filters {padding-right: 10%;}
+/*TEST*/
+div#imagen {width: 300px; height: 370px; background-size: cover;/*sólo para ejemplo*/ background-image: url("../Image/invierno.JPG"); margin: 0px; display: inline-block;}
+div#imagen1 {width: 300px; height: 370px; background-size: cover;/*sólo para ejemplo*/ background-image: url("../Image/primav.jpeg"); margin: 0px; display: inline-block;}
+div#info {position:absolute; overflow:hidden; width: 300px; height: 370px; background-color: rgba(31, 31, 31, 0.9); opacity:0; transition: opacity 0.3s; color: white;}
+div#info1 {position:absolute; overflow:hidden; width: 300px; height: 370px; background-color: rgba(31, 31, 31, 0.9); opacity:0; transition: opacity 0.3s; color: white;}
+div#imagen:hover div#info {opacity:1;}
+div#imagen1:hover div#info1 { opacity: 1;}
+p#headline {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s; font-family: 'Coco Gothic'}
+p#headline1 {position: absolute; font-size: 1.5rem; margin-left: -15px; margin-top: 15px; transition: margin-left 0.3s; font-family:'Coco Gothic';}
+div#imagen:hover p#headline {margin-left: 55px;}
+div#imagen1:hover p#headline1 {margin-left: 40px;}
+p#descripcion {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
+p#descripcion1 {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
+div#imagen:hover p#descripcion {margin-top: 75px;}
+div#imagen1:hover p#descripcion1 {margin-top: 75px;}

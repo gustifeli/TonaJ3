@@ -1,0 +1,29 @@
+.btn-ttc,
+.btn-ttc:hover,
+.btn-ttc:active {color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: black;}
+#imgMin{width:200px; height: 136px;}
+.row {border: 1px solid grey; margin-right: auto; margin-left: auto; background-color: snow; opacity: 0.9; margin-top: 1%; margin-bottom: 1%; width: 70%;}
+#cont {padding-right: 2%; padding-left: 2%;}
+body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
+/* style admin */ 
+#imgMin{width:200px; height: 136px;}
+.container-fluid{opacity: 0.9;}
+.btn-default {float: right;} 
+.btn-default:hover, .btn-default:active {background-color: black; color: white;}
+#txt {color: white; padding-top: 15px;}
+#aMenu {text-align: right;}
+.rowWidth{ width: 30px; }
+.modals{margin-top: 2%; height: 70%;}
+.labelSize{font-size: medium; font-weight: normal;}
+
+.btn-transparente{ background-color: transparent;}
+.centrar{ margin-left: auto; margin-right: auto;}
+/*style nombre user logeado*/
+#transparent{background-color: transparent}
+@media (max-width: 4096px) and (min-width: 1280px) {
+    .user{margin-left: 70%}
+}
+/*style btn agregar producto*/
+.btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px; margin-bottom: 5px}
+/*encabezado producto*/
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 0.5%; margin-bottom: 0.5%;}
