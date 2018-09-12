@@ -87,7 +87,7 @@
                                 <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
 
                                 <!--START TEST-->
-                                <td><button id="btnEliminar" class="btn btn-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}">Eliminar</button></td>
+                                <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}">Eliminar</button></td>
                                 <!--END TEST-->
                             </tr>
                         </c:forEach>
@@ -112,8 +112,8 @@
             function alerta(id) {
                 var p = confirm("¿Esta seguro que desea eliminar el producto?");
                 if (p == true) {
-                    alert("¡El producto se elimino con éxito!");
                     location.href = "EliminarProducto?cod=" + id;
+                    alert("¡El producto se elimino con éxito!");
                 }
             }
         </script>
