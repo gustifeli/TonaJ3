@@ -41,34 +41,8 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 /*|-----------------------------------|*/
 /*|    STYLE ADDPRODUCT IMPUTFILE     |*/
 /*|-----------------------------------|*/
-.file-input {
+.logo {
   visibility: hidden;
   width: 0;
   position: relative;
-}
-.file-input::before {
-    
-    
-  content: 'seleccione la imagen';
-  display: inline-block;
-  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
-  background-color: transparent;
-  border: 1px solid #999;
-  border-radius: 3px;
-  padding: 5px 8px;
-  outline: #999;
-  white-space: nowrap;
-  -webkit-user-select: none;
-  cursor: pointer;
-  text-shadow: 1px 1px #fff;
-  font-weight: 700;
-  font-size: 10pt;
-  visibility: visible;
-  position: absolute;
-}
-.file-input:hover::before {
-  border-color: black;
-}
-.file-input:active::before {
-  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }
