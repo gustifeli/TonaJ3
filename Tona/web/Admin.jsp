@@ -83,10 +83,11 @@
                                 <td><c:out value="${p.descripcion}"/></td>
                                 <td hidden="true"><c:out value="${p.idCampana}"/></td>
                                 <td><c:out value="${p.campana}"/></td>
-                                <td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>
+                                <!--<td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>-->
                                 <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
 
                                 <!--START TEST-->
+                                <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}">Modificar</button></td>
                                 <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}">Eliminar</button></td>
                                 <!--END TEST-->
                             </tr>
@@ -114,6 +115,13 @@
                 if (p == true) {
                     location.href = "EliminarProducto?cod=" + id;
                     alert("¡El producto se elimino con éxito!");
+                }
+            }
+
+            function modifAlert(id) {
+                var p = confirm("¿Esta seguro que desea modificar el producto?");
+                if (p == true) {
+                    location.href = "BuscarProductoCod?cod=" + id;
                 }
             }
         </script>
