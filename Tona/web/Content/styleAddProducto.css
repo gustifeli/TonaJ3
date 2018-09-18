@@ -2,7 +2,7 @@
 .btn-ttc:hover,
 .btn-ttc:active {color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: black;}
 #imgMin{width:200px; height: 136px;}
-.row {border: 1px solid grey; margin-right: auto; margin-left: auto; background-color: snow; opacity: 0.9; margin-top: 1%; margin-bottom: 1%; width: 70%;}
+/*.row {border: 1px solid grey; margin-right: auto; margin-left: auto; background-color: snow; opacity: 0.9; margin-top: 1%; margin-bottom: 1%; width: 70%;}*/
 #cont {padding-right: 2%; padding-left: 2%;}
 body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 /* style admin */ 
@@ -27,3 +27,48 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 .btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px; margin-bottom: 5px}
 /*encabezado producto*/
 #encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 0.5%; margin-bottom: 0.5%;}
+/*|---------------------------------|*/
+/*|       STYLE EDITPRODUCTO        |*/
+/*|---------------------------------|*/
+.btn-outline-dark:hover{
+ background-color: black !important; color: black; border-color: black;}
+
+.input-group{ margin-bottom:20px;}
+.row{width: 100% !important; border: none !important;}
+.input-id{visibility: hidden;}
+#imgEdit{width: 50%; height: 50%;}
+
+/*|-----------------------------------|*/
+/*|    STYLE ADDPRODUCT IMPUTFILE     |*/
+/*|-----------------------------------|*/
+.file-input {
+  visibility: hidden;
+  width: 0;
+  position: relative;
+}
+.file-input::before {
+    
+    
+  content: 'seleccione la imagen';
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  background-color: transparent;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: #999;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+  visibility: visible;
+  position: absolute;
+}
+.file-input:hover::before {
+  border-color: black;
+}
+.file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
