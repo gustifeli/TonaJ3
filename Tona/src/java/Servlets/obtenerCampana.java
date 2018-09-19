@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -35,9 +36,12 @@ public class obtenerCampana extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Data d = new Data();
+        HttpSession r = request.getSession(true);
         try {
             ArrayList<Campana> campana = d.obtenerCampana();
             request.setAttribute("campana", campana);
+            request.setAttribute("mensaje", r.getAttribute("msj"));
+            System.out.println("Mensaje: "+r.getAttribute("msj"));
             RequestDispatcher rd =  request.getRequestDispatcher("AddProduct.jsp");
             rd.forward(request, response);
         } catch (Exception e) {
