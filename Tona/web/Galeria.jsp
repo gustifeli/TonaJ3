@@ -18,7 +18,7 @@
         <title>Galería</title>
     </head>
     <body>
-        <nav id='nav' class="navbar navbar-dark">
+        <nav id='nav' class="navbar navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,14 +42,14 @@
     <center><div class="container-fluid">
 
             <div id="imagen">
-                <a href="GaleriaInvierno.jsp"><div id="info">
+                <a href="ObtenerProductoInvierno"><div id="info">
                         <p id="headline">OTOÑO/INVIERNO</p>
                         <p id="descripcion">2018</p>
                     </div>
                 </a>
             </div>
             <div id="imagen1">
-                <a href="Galeriaverano.jsp"><div id="info1">
+                <a href="Galeriaverano"><div id="info1">
                         <p id="headline1">PRIMAVERA/VERANO</p>
                         <p id="descripcion1">2018</p>
                     </div>
