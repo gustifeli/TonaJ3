@@ -26,10 +26,10 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
 /*---------------------------*/
 .masonry-container-image{margin-bottom: 10%}
 
-.mdc-button{
+/*.mdc-button{
     @include mdc-button-base_;
     @iclude mdc-button-ink-color(secundary);
-}
+}*/
 
 .my-masonry-image-list {
     -webkit-column-count: 6;
@@ -77,3 +77,22 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
         margin-bottom: 130px !important;
     }
 }
+.divisor {
+    border-top: 1px solid #bdbdbd;
+    margin: 10px; margin-right: 0px;
+    padding-top: 10px;
+}
+/*.mdc-card__action--icon:not(:disabled), .mdc-card__action--icon:focus {
+     color: #BDBDBD !important;     
+     background-color: transparent !important;
+}
+.mdc-card__action--icon:hover{
+    color: white !important;
+    background-color: black !important;
+    border-radius: 50%;
+}
+.mdc-card__action--icon:active{
+    color: blue !important;
+    background-color: #FAFAFA !important;
+    border-radius: 50%;
+}*/
