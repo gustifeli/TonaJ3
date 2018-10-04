@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="Content/stylegalerias.css">
         <!--<link rel="stylesheet" href="Content/testCSS.css" type="text/css">-->
         <!--        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
@@ -53,9 +54,13 @@
                         <div class="mdc-card">
                             <img class="mdc-image-list__image img-rounded" src="ObtenerImagenGaleriaInvierno?cod=${p.idproducto}">
                             <div class="mdc-image-list__supporting">
-                                <span class="mdc-image-list__label"><label class="text-card"><c:out value="${p.descripcion}"/></label>  </span>
+                                <span class="mdc-image-list__label"><label class="text-card"><c:out value="${p.descripcion}"/></label> </span>
                             </div>
-
+                            <div class="divisor">
+                                <div class="mdc-card__action-icons">
+                                    <button type="button" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" id="btnEnviar" onclick="enviarMensaje(${p.idproducto})" >send</button>
+                                </div>
+                            </div>
                         </div>
                     </li>
                 </c:forEach>
@@ -71,6 +76,64 @@
             </c:forEach>
         </div>-->
         </div>
+
+        <!--Modal Enviar Mensaje-->
+        <div class="modal fade" id="modal-enviar" tabindex="-1" role="dialog" aria-hidden="true" aria-labelledby="modal-enviar">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header modal-header-color">
+                        <h3 class="modal-title" id="modal-enviar">Enviar Consulta</h3>
+                        <button type="button" id="boton" class="close" data-dismiss="modal" aria-label="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form method="post" action="Contact">
+                        <div class="modal-body">
+                            <div class="form-contacts">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre"  required="true">
+                                    <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellido</label>
+                                    <input class="form-control" type="text" id="apellido" name="apellido" required="true">
+                                    <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input class="form-control" type="text" id="email" name="email" required="true">
+                                    <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Telefono</label>
+                                    <input class="form-control" type="text" id="telefono" name="telefono">
+                                </div>
+                                <div class="form-group">
+                                    <label>Localidad</label>
+                                    <input class="form-control" type="text" id="localidad" name="localidad">
+                                </div>
+                                <div class="form-group">
+                                    <label>Mensaje</label>
+                                    <textarea class="form-control" name="comentario" rows="7" cols="40" id="comentario" ></textarea>
+                                    <small class="form-text txt-obligatorio">Campo Obligatorio</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <div id="clear">
+                                <input name="sumbit" type="submit" onclick="send()" class="button boton" id="sumbit_contacto" value="ENVIAR" />
+                                <p class="ocultar">
+                                    Para comunicarte,completá el formulario, o envianos un mail a la siguiente dirección:
+                                    <a href="mailto:tonaoficial@hotmail.com" class="linea">tonaoficial@hotmail.com</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <nav id="nav" class=" navbar-inverse fixed-bottom">
             <div id="txtfooter">
                 <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
@@ -85,13 +148,27 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
         <script>
-            lightbox.option({
-                'resizeDuration': 200,
-                'wrapAround': true,
-                'alwaysShowNavOnTouchDevices': true,
-                'albumLabel': "",
-                'positionFromTop': 50
-            })
+                                    lightbox.option({
+                                        'resizeDuration': 200,
+                                        'wrapAround': true,
+                                        'alwaysShowNavOnTouchDevices': true,
+                                        'albumLabel': "",
+                                        'positionFromTop': 50
+                                    });
+        </script>
+        <script>
+            function enviarMensaje(id) {
+                $(document).ready(function () {
+//                    $("#btnEnviar").click(function () {
+                        $("#modal-enviar").modal();
+                        location.href = "ObtenerProductoMensaje?cod=" + id;
+//                    });
+                });
+
+            }
+        </script>
+        <script>
+
         </script>
     </body>
 </html>
