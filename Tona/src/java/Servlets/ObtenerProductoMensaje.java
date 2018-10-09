@@ -6,20 +6,21 @@
 package Servlets;
 
 import Controlador.Data;
+import Modelos.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author GustiFeli
+ * @author gusti
  */
-public class ObtenerImagenGaleriaInvierno extends HttpServlet {
+public class ObtenerProductoMensaje extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,24 +33,16 @@ public class ObtenerImagenGaleriaInvierno extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
+        Data d = new Data();
         try {
-            response.setContentType("image/jpeg");
-            Data d = new Data();
-            try {
-                int cod = Integer.parseInt(request.getParameter("cod"));
-                byte[] imagen = d.obtenerImagenOtoñoInvierno(cod);
-                if (imagen != null) {
-                    ServletOutputStream out = response.getOutputStream();
-                    out.write(imagen);
-                } else {
-                    System.out.println("ERror");
-                }
-                RequestDispatcher rd = request.getRequestDispatcher("GaleriaInvierno.jsp");
-                rd.forward(request, response);
-            } catch (Exception e) {
-                System.out.println("SERV-OBT_IMG_INV: Error al cargar la imagen: " + e.getMessage());
-            }
+            int cod = Integer.parseInt(request.getParameter("cod"));
+            ArrayList<Producto> prod = d.obtenerProductoCod(cod);
+            request.setAttribute("producto", prod);
+            RequestDispatcher rd = request.getRequestDispatcher("Contacto.jsp");
+            rd.forward(request, response);
         } catch (Exception e) {
+            System.out.println("SERVLET OBTENER-PROD-MSJ ERRROR: " + e);
         }
     }
 
