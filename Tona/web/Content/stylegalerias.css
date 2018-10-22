@@ -96,3 +96,20 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
     background-color: #FAFAFA !important;
     border-radius: 50%;
 }*/
+/*---------------------------------*/
+/*   STYLE MODAL ENVIAR CONSULTA   */
+/*---------------------------------*/
+
+.consulta-msj{
+    border-style: solid;
+    border-color: #ced4da;
+    border-radius: 5px;
+    border-width: 1px;
+}
+.inp:disabled{
+    border: none !important;
+    background-color: transparent !important;
+}
+.txtarea{
+    border: none! important;
+}
