@@ -15,34 +15,46 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 .rowWidth{ width: 30px; }
 .modals{margin-top: 2%; height: 70%;}
 .labelSize{font-size: medium; font-weight: normal;}
-
 .btn-transparente{ background-color: transparent;}
 .centrar{ margin-left: auto; margin-right: auto;}
+
 /*style nombre user logeado*/
-#transparent{background-color: transparent}
-@media (max-width: 4096px) and (min-width: 1280px) {
+
+/*@media (max-width: 4096px) and (min-width: 1280px) {
     .user{margin-left: 70%}
-}
+}*/
 /*style btn agregar producto*/
-.btn-agregar{float: right; display: inline-flex !Important; margin-top: 5px; margin-bottom: 5px}
+.btn-agregar{float: right; display: inline-block !Important; margin-top: 5px; margin-bottom: 5px}
 /*encabezado producto*/
-#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 0.5%; margin-bottom: 0.5%;}
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 0.5%;}
 /*|---------------------------------|*/
 /*|       STYLE EDITPRODUCTO        |*/
 /*|---------------------------------|*/
-.btn-outline-dark:hover{
- background-color: black !important; color: black; border-color: black;}
-
-.input-group{ margin-bottom:20px;}
+.btn-outline-dark:hover{background-color: black !important; color: black; border-color: black;}
+input.form-control[type=text]{background: transparent; width: 150px; border: 1px solid white; border-radius: 999em; padding: 4px; color: white; height: 40px; position: relative;}
+.input-group-sm input[type=text]{padding-left: 35px;}
+.input-group-sm{position: relative; margin-left: 60%;}
+#user {top: 0; padding: 9px 8px; color: white; position: absolute; float: left;}
+#power{}
+#botp{border-radius: 50px; position: absolute; top: 5px; margin-left: 115px; width: 30px; height: 30px; padding: 2px 1px}
 .row{width: 100% !important; border: none !important;}
 .input-id{visibility: hidden;}
 #imgEdit{width: 50%; height: 50%;}
-
 /*|-----------------------------------|*/
 /*|    STYLE ADDPRODUCT IMPUTFILE     |*/
 /*|-----------------------------------|*/
-.logo {
-  visibility: hidden;
-  width: 0;
-  position: relative;
+.logo {visibility: hidden; width: 0; position: relative;}
+@media screen and (max-width: 1025px) {.input-group-sm {display: none;}}
+@media only screen and (min-width: 1024px) {#btn-circle {display:none;}}
+#btn-circle {width: 30px; height: 30px; padding: 2px 0px; border-radius: 15px; text-align: center; font-size: 12px; line-height: 1.42857; justify-content: flex-end;}
+#btn-circle:hover{border: 1px solid white; transition: .1s;}
+
+.table-wrapper-scroll-y{
+    display: block;
+    max-height: 700px;
+    overflow-y: scroll;
+    -ms-overflow-style: -ms
+}
+.fixed-table-header{
+    position: fixed;
 }
