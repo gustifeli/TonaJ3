@@ -3,18 +3,12 @@
     Author     : gusti
 */
 
-body, html {
-    height: auto;
-    width: auto;
-    padding-top: 3%;
-    max-width: 100%;
-    /*background: #ffffff;*/
-}
-.background-transparent{ background: url("/Tona/Image/back.jpg")100% 100% no-repeat; 
-                        opacity: 0.5; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background-size: cover; background-repeat: no-repeat;}
+body, html {height: auto; width: auto; padding-top: 3%; max-width: 100%; /*background: #ffffff;*/}
+.background-transparent{ background: url("/Tona/Image/back.jpg")100% 100% no-repeat; opacity: 0.5; width: 100%; height: 100%; position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; background-size: cover; background-repeat: no-repeat;}
 .modal-header{ padding: 2%;}
-.modal-content{width: 285px; text-align: center;    }
+.modal-content{width: 285px; text-align: center; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
 .input-group {padding: 2%;}
-.btn-outline-dark {border-color: black; color: black;}
-.btn-outline-dark:hover {color: white;}
-.btn-outline-dark:active {outline-color: inherit;}
+.btn-outline {border-color: black; color: black; background: white;}
+.btn-outline:hover {color: white; background: black; }
+.btn-outline:active {outline-color: inherit;}
+input .form-control:focus {outline: 0px;}

@@ -58,7 +58,8 @@
                             </div>
                             <div class="divisor">
                                 <div class="mdc-card__action-icons">
-                                    <button type="button" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" id="btnEnviar" onclick="enviarMensaje(${p.idproducto})" >send</button>
+                                    <button type="button" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" 
+                                            id="btnEnviar" onclick="enviarMensaje(${p.idproducto}, '${p.descripcion}')">send</button>
                                 </div>
                             </div>
                         </div>
@@ -115,14 +116,19 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Mensaje</label>
-                                    <textarea class="form-control" name="comentario" rows="7" cols="40" id="comentario" ></textarea>
+                                    <div class="consulta-msj">
+                                        <input type="text" disabled="true" class="form-control inp"> 
+                                        <textarea class="form-control txtarea" name="comentario" rows="3" cols="40" id="comentario"></textarea>
+                                    </div>
                                     <small class="form-text txt-obligatorio">Campo Obligatorio</small>
                                 </div>
                             </div>
                         </div>
                         <div class="modal-footer">
                             <div id="clear">
+                                
                                 <input name="sumbit" type="submit" onclick="send()" class="button boton" id="sumbit_contacto" value="ENVIAR" />
+                                
                                 <p class="ocultar">
                                     Para comunicarte,completá el formulario, o envianos un mail a la siguiente dirección:
                                     <a href="mailto:tonaoficial@hotmail.com" class="linea">tonaoficial@hotmail.com</a>
@@ -157,14 +163,14 @@
                                     });
         </script>
         <script>
-            function enviarMensaje(id) {
+            function enviarMensaje(id, desc) {
                 $(document).ready(function () {
 //                    $("#btnEnviar").click(function () {
-                        $("#modal-enviar").modal();
-                        location.href = "ObtenerProductoMensaje?cod=" + id;
+                    $("#modal-enviar").modal();
+//                    location.href = "ObtenerProductoMensaje?cod=" + id;
+                    document.getElementById("comentario").value = 'Ingrese su consulta sobre el Producto: ' + desc + ' Cod.: ' + id;
 //                    });
                 });
-
             }
         </script>
         <script>
