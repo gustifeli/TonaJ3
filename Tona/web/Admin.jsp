@@ -19,28 +19,25 @@
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <title>All Products</title>
     </head>
-    <body class="background-admin">
+    <body class="background-admin" style="background-attachment: fixed">
 
-        <nav id='nav' class="navbar navbar-dark">
+        <nav id='nav' class="navbar  navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
 
-            <div class="user fixed">
-                <div class="input-group">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text" id="transparent"><i class="material-icons sm-dark sm-inactive">account_circle</i></span>
-                    </div>
-                    <input id="transparent" type="text" class="form-control" value="${sessionScope['sessionUser']}" disabled="true" aria-label="Username" aria-describedby="basic-addon1">
-                    <form action="Logout" method="post">
-                        <button class="btn btn-sm btn-outline-danger"  type="submit"><i class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
-                    </form>
-                </div>
+            <div class="input-group-sm">
+                <input type="text" class="form-control" value="${sessionScope['sessionUser']}" disabled="true" aria-label="Username" aria-describedby="basic-addon1">
+                <i id="user" class="material-icons sm-dark sm-inactive">account_circle</i>
+                <form action="Logout" method="post">
+                    <button id="botp" class="btn btn-danger btn-circle"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
+                </form> 
             </div>
+                
+               
+            <button id="btn-circle" class="btn btn-default btn-circle"><i id="menu" class="material-icons">more_vert</i></button>
+              
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,11 +57,13 @@
             </div>
         </nav>
         <h1 id="encabezado"> Productos</h1>
-        <div class="container-fluid">
-            <a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a>
-            <div class="panel-body">
-                <table class="table table-responsive table-hover">
-                    <thead class="thead-dark">
+        
+        <div class="container-fluid">          
+            <div class="panel-group table-wrapper-scroll-y">
+                <a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a>              
+                <div class="table-responsive">
+                    <table class="table">
+                    <thead class="thead-dark" >
                         <tr>
                             <th hidden="true" scope="col">Cod.</th>
                             <th class="rowWidth" scope="col">Imagen</th>
@@ -94,12 +93,13 @@
                         </c:forEach>
                     </tbody>
                 </table>
+                </div>
             </div>
         </div>
         <div>
             <footer class="footer">
                 <div>
-                    <nav id="nav" class=" navbar-inverse fixed-bottom">
+                    <nav id="nav" class=" navbar-inverse fixed-bottom ">
                         <div id="txtfooter">
                             <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
                             <div class="text-center img"> 
@@ -110,6 +110,7 @@
             </footer>
         </div>
         <script>
+
             function alerta(id) {
                 var p = confirm("¿Esta seguro que desea eliminar el producto?");
                 if (p == true) {
@@ -125,5 +126,8 @@
                 }
             }
         </script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
     </body>
 </html>
