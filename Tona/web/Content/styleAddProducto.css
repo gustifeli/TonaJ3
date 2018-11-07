@@ -1,6 +1,3 @@
-.btn-ttc,
-.btn-ttc:hover,
-.btn-ttc:active {color: white; text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); background-color: black;}
 #imgMin{width:200px; height: 136px;}
 /*.row {border: 1px solid grey; margin-right: auto; margin-left: auto; background-color: snow; opacity: 0.9; margin-top: 1%; margin-bottom: 1%; width: 70%;}*/
 #cont {padding-right: 2%; padding-left: 2%;}
@@ -12,6 +9,8 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 .btn-default:hover, .btn-default:active {background-color: black; color: white;}
 #txt {color: white; padding-top: 15px;}
 #aMenu {text-align: right;}
+.rowWidth{ width: 10%; }
+.modals{margin-top: 2%; height: 70%;}
 .rowWidth{ width: 30px; }
 .modals{margin-top: 120px; height: 70%;}
 .labelSize{font-size: medium; font-weight: normal;}
@@ -24,9 +23,13 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
     .user{margin-left: 70%}
 }*/
 /*style btn agregar producto*/
+
+
+
 .btn-agregar{float: right; display: inline-block !Important; margin-top: 5px; margin-bottom: 5px}
 .input-group{margin-bottom: 10px;}
 .input-span{height: min-content;}
+
 /*encabezado producto*/
 #encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-bottom: 0.5%;}
 #encabezadoAdmin {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 0.5%;}
@@ -39,8 +42,13 @@ input.form-control[type=text]{background: transparent; width: 150px; border: 1px
 .input-group-sm{position: relative; margin-left: 60%;}
 #user {top: 0; padding: 9px 8px; color: white; position: absolute; float: left;}
 #power{}
+
+#botp{border-radius: 50px; position: absolute; top: 5px; margin-left: 110px; width: 30px; height: 30px; padding: 2px 1px}
+.row{width: 100% !important; border: none !important;}
+
 #botp{border-radius: 50px; position: absolute; top: 5px; margin-left: 115px; width: 30px; height: 30px; padding: 2px 1px}
 /*.row{width: 100% !important; border: none !important;}*/
+
 .input-id{visibility: hidden;}
 #imgEdit{width: 50%; height: 50%;}
 /*|-----------------------------------|*/
@@ -60,3 +68,5 @@ input.form-control[type=text]{background: transparent; width: 150px; border: 1px
 .fixed-table-header{
     position: fixed;
 }
+#btnModif{width: 50px; height: 40px;}
+#btnEliminar{width: 50px; height: 40px;}
