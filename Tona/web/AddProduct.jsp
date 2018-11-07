@@ -11,8 +11,6 @@
     <head>
         <meta charset="utf-8" http-equiv="Content-type" content="text/html">
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
-        <!--        <link rel="stylesheet" href="Content/bootstrap.min.css">-->
-        <!--        <link rel="stylesheet" type="text/css" href="Content/bootstrap.css" >-->
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
@@ -21,7 +19,7 @@
         <title>+ - Producto</title>
     </head>
     <body background="Image/prueba.jpg">
-        <nav id='nav' class="navbar navbar-dark">
+        <nav id='nav' class="navbar navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,43 +44,51 @@
                     <div class="modal-header">
                         <h3 id="encabezado" class="modal-title ">Nuevo Producto</h3>
                     </div>
-                    <form method="post" action="AddProd" enctype="multipart/form-data" onsubmit="return newProducto()">
-                        <div class="modal-body">
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Descripción</label>
+                    <div class="modal-body">
+                        <form method="post" action="AddProd" enctype="multipart/form-data" onsubmit="return newProducto()">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">Descripción</span>
+                                            </div>
+                                            <textarea name="descripcion" placeholder="Ingrese la descripción" id="" cols="30" rows="3" class="form-control"></textarea>
+                                        </div>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text input-span">Imagen</span>
+                                            </div>
+                                            <span class="logo" style="width: 0px">
+                                                <input class="file-input logo" id="logo" type="file" name="logo" accept="image/*">
+                                            </span>
+                                            <label for="logo" class="btn btn-outline-dark">
+                                                <span>Seleccionar el archivo</span>
+                                            </label>
+                                        </div>
+                                        <div class="form-group">
+                                            <select name="idCampana" placeholder="Seleccione la campaña" class="form-control" required>
+                                                <c:forEach var="c" items="${campana}">
+                                                    <option value="${c.idCampana}"/>
+                                                    <c:out value="${c.campana}"/>
+                                                    </option>
+                                                </c:forEach>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <img src="" alt="ImgPreview">
+                                        </div>
+                                    </div>
                                 </div>
-                                <textarea name="descripcion" placeholder="Ingrese la descripción" id="" cols="30" rows="3" class="form-control"></textarea>
                             </div>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">Imagen</lable>
-                                </div>
-                                <span class="logo">
-                                    <input clas="file-input" id="logo" type="file" name="logo" accept="image/*">
-                                </span>
-                                <label for="logo" class="btn btn-outline-dark">
-                                    <span>Seleccionar el archivo
-                                </label>
-                            </div>
-                            <div class="form-group">
-                                <select name="idCampana" placeholder="Seleccione la campaña" class="form-control" required>
-                                    <c:forEach var="c" items="${campana}">
-                                        <option value="${c.idCampana}"/>
-                                        <c:out value="${c.campana}"/>
-                                        </option>
-                                    </c:forEach>
-                                </select>
-                            </div>
-                            <div>
-                                <img src="" alt="ImgPreview">
-                            </div>
+                           
 
-                        </div>
-                        <div class="modal-footer">
-                            <button type="submit" class="btn btn-outline-dark centrar">Guardar Producto</button>
-                        </div>
-                    </form>
+
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-outline-dark centrar">Guardar Producto</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -155,22 +161,22 @@
         <!--Script function-->
         <c:if test="${not empty mensaje}">
             <script>
-                        function newProducto() {
-                            alert("${mensaje}");
-                        }
+                            function newProducto() {
+                                alert("${mensaje}");
+                            }
             </script>
         </c:if>
 
-        <script type="application/javascript">
-            jQuery('input[type=file]').change(function(){
-            var filename = jQuery(this).val().split('\\').pop();
-            var idname = jQuery(this).attr('id');
-            console.log(jQuery(this));
-            console.log(filename);
-            console.log(idname);
-            jQuery('span.'+idname).next().find('span').html(filename);
-            });
-        </script>
+        <!--        <script type="application/javascript">
+                    jQuery('input[type=file]').change(function(){
+                    var filename = jQuery(this).val().split('\\').pop();
+                    var idname = jQuery(this).attr('id');
+                    console.log(jQuery(this));
+                    console.log(filename);
+                    console.log(idname);
+                    jQuery('span.'+idname).next().find('span').html(filename);
+                    });
+                </script>-->
 
     </body>
 </html>

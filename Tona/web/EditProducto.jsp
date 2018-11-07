@@ -19,7 +19,7 @@
         <title>+ - Producto</title>
     </head>
     <body background="Image/prueba.jpg">
-        <nav id='nav' class="navbar navbar-dark">
+        <nav id='nav' class="navbar navbar-dark fixed-top">
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
