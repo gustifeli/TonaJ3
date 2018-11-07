@@ -13,7 +13,7 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 #txt {color: white; padding-top: 15px;}
 #aMenu {text-align: right;}
 .rowWidth{ width: 30px; }
-.modals{margin-top: 2%; height: 70%;}
+.modals{margin-top: 120px; height: 70%;}
 .labelSize{font-size: medium; font-weight: normal;}
 .btn-transparente{ background-color: transparent;}
 .centrar{ margin-left: auto; margin-right: auto;}
@@ -25,8 +25,11 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 }*/
 /*style btn agregar producto*/
 .btn-agregar{float: right; display: inline-block !Important; margin-top: 5px; margin-bottom: 5px}
+.input-group{margin-bottom: 10px;}
+.input-span{height: min-content;}
 /*encabezado producto*/
-#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 0.5%;}
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-bottom: 0.5%;}
+#encabezadoAdmin {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 0.5%;}
 /*|---------------------------------|*/
 /*|       STYLE EDITPRODUCTO        |*/
 /*|---------------------------------|*/
@@ -37,13 +40,13 @@ input.form-control[type=text]{background: transparent; width: 150px; border: 1px
 #user {top: 0; padding: 9px 8px; color: white; position: absolute; float: left;}
 #power{}
 #botp{border-radius: 50px; position: absolute; top: 5px; margin-left: 115px; width: 30px; height: 30px; padding: 2px 1px}
-.row{width: 100% !important; border: none !important;}
+/*.row{width: 100% !important; border: none !important;}*/
 .input-id{visibility: hidden;}
 #imgEdit{width: 50%; height: 50%;}
 /*|-----------------------------------|*/
 /*|    STYLE ADDPRODUCT IMPUTFILE     |*/
 /*|-----------------------------------|*/
-.logo {visibility: hidden; width: 0; position: relative;}
+.logo {visibility: hidden;  width: 0px; position: relative;}
 @media screen and (max-width: 1025px) {.input-group-sm {display: none;}}
 @media only screen and (min-width: 1024px) {#btn-circle {display:none;}}
 #btn-circle {width: 30px; height: 30px; padding: 2px 0px; border-radius: 15px; text-align: center; font-size: 12px; line-height: 1.42857; justify-content: flex-end;}
