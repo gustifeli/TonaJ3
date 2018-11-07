@@ -35,9 +35,9 @@
                 </form> 
             </div>
                 
-               
+               <form action="Logout" method="post">
                     <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
-              
+              </form>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,14 +60,14 @@
         
         <div class="container-fluid">          
             <div class="panel-group table-wrapper-scroll-y">
-                <a role="button" type="button" href="obtenerCampana" class="btn btn-agregar btn-ttc"><i class="material-icons sm-dark">add_circle_outline</i> Producto</a>              
+                <button onclick="location.href='obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>              
                 <div class="table-responsive">
                     <table class="table">
                     <thead class="thead-dark" >
                         <tr>
                             <th hidden="true" scope="col">Cod.</th>
                             <th class="rowWidth" scope="col">Imagen</th>
-                            <th style="width: 76%" scope="col">Descripción</th>
+                            <th style="width: 60%" scope="col">Descripción</th>
                             <th hidden="true" scope="col">CodCamp</th>
                             <th scope="col">Campaña</th>
                             <th class="rowWidth" scope="col"></th>
@@ -86,8 +86,8 @@
                                 <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
 
                                 <!--START TEST-->
-                                <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}">Modificar</button></td>
-                                <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}">Eliminar</button></td>
+                                <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">edit</i></button></td>
+                                <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">delete_sweep</i></button></td>
                                 <!--END TEST-->
                             </tr>
                         </c:forEach>
