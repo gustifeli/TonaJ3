@@ -49,9 +49,8 @@ input.form-control[type=text]{background: transparent; width: 150px; border: 1px
 .logo {visibility: hidden;  width: 0px; position: relative;}
 @media screen and (max-width: 1025px) {.input-group-sm {display: none;}}
 @media only screen and (min-width: 1024px) {#btn-circle {display:none;}}
-#btn-circle {width: 30px; height: 30px; padding: 2px 0px; border-radius: 15px; text-align: center; font-size: 12px; line-height: 1.42857; justify-content: flex-end;}
-#btn-circle:hover{border: 1px solid white; transition: .1s;}
-
+#btn-circle{color: white; background: transparent; border: 0.5px solid white; width: 30px; height: 30px; border-radius: 999em; padding: 2px 2px; margin-left: auto;}
+#btn-circle:hover:active{color: black; background: white;}
 .table-wrapper-scroll-y{
     display: block;
     max-height: 700px;

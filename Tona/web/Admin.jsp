@@ -36,7 +36,7 @@
             </div>
                 
                
-            <button id="btn-circle" class="btn btn-default btn-circle"><i id="menu" class="material-icons">more_vert</i></button>
+                    <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
               
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
