@@ -113,3 +113,6 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
 .txtarea{
     border: none! important;
 }
+.txt-obligatorio {
+    color: red ;
+}
