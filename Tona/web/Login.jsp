@@ -77,7 +77,7 @@
                         <p style="color: #c9302c">${requestScope.msj}</p>
                     </div>
                     <div class="modal-footer" >
-                        <div class="col-md-12 text-center">
+                        <div class="col-md-12">
                             <input type="submit" class="btn btn-outline" value="Acceder">
                         </div>
                     </div>

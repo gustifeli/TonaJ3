@@ -86,8 +86,8 @@ public class Contact extends HttpServlet {
         String inputMsj = request.getParameter("msj");
         String comentario = request.getParameter("comentario");
         String msj = "";
-        System.out.println((String) session.getAttribute("idCampana"));
-        int idCampana = Integer.parseInt((String) session.getAttribute("idCampana"));
+       // System.out.println("id campana: " +(String) session.getAttribute("idCampana"));
+        //int idCampana = Integer.parseInt((String) session.getAttribute("idCampana"));
         String resultMessage = "";
         if (inputMsj == null) {
             content = "Nombre: " + (request.getParameter("nombre"))
@@ -129,9 +129,9 @@ public class Contact extends HttpServlet {
                 request.setAttribute("msg", resultMessage);
 //            getServletContext().getRequestDispatcher("/Contactos.jsp").forward(request, response);
 //            //response.sendRedirect("Contactos.jsp");
-                if (idCampana == 1) {
-                    response.sendRedirect("ObtenerProductoInvierno");
-                }
+//                if (idCampana == 1) {
+//                    response.sendRedirect("ObtenerProductoInvierno");
+//                }
             }
         }
         
