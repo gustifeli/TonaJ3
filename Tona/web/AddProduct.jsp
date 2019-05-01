@@ -11,10 +11,9 @@
     <head>
         <meta charset="utf-8" http-equiv="Content-type" content="text/html">
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-        <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <title>+ - Producto</title>
     </head>
@@ -48,7 +47,7 @@
                         <form method="post" action="AddProd" enctype="multipart/form-data" onsubmit="return newProducto()">
                             <div class="container-fluid">
                                 <div class="row">
-                                    <div class="col-sm-9">
+                                    <div class="col-lg-9">
                                         <div class="input-group">
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text">Descripción</span>
@@ -60,7 +59,7 @@
                                                 <span class="input-group-text input-span">Imagen</span>
                                             </div>
                                             <span class="logo" style="width: 0px">
-                                                <input class="file-input logo" id="logo" type="file" name="logo" accept="image/*">
+                                                <input class="file-input logo" id="logo" type="file" name="logo" accept="image/*" onchange="loadFile(event)">
                                             </span>
                                             <label for="logo" class="btn btn-outline-dark">
                                                 <span>Seleccionar el archivo</span>
@@ -74,14 +73,15 @@
                                                     </option>
                                                 </c:forEach>
                                             </select>
-                                        </div>
-                                        <div>
-                                            <img src="" alt="ImgPreview">
-                                        </div>
+                                        </div>                                       
+                                    </div>
+
+                                    <div class="col-lg-3">
+                                        <p><img class="img-thumbnail shadow-lg centrar" id="previewImg" src="Image/nodisponible.png" alt="ImgPreview"></p>
                                     </div>
                                 </div>
                             </div>
-                           
+
 
 
                             <div class="modal-footer">
@@ -161,22 +161,18 @@
         <!--Script function-->
         <c:if test="${not empty mensaje}">
             <script>
-                            function newProducto() {
-                                alert("${mensaje}");
-                            }
+                                                    function newProducto() {
+                                                        alert("${mensaje}");
+                                                    }
             </script>
         </c:if>
 
-        <!--        <script type="application/javascript">
-                    jQuery('input[type=file]').change(function(){
-                    var filename = jQuery(this).val().split('\\').pop();
-                    var idname = jQuery(this).attr('id');
-                    console.log(jQuery(this));
-                    console.log(filename);
-                    console.log(idname);
-                    jQuery('span.'+idname).next().find('span').html(filename);
-                    });
-                </script>-->
-
+        <!--funcion para cargar la preview-->
+        <script>
+            var loadFile = function (event) {
+                var output = document.getElementById('previewImg');
+                output.src = URL.createObjectURL(event.target.files[0]);
+            };
+        </script>
     </body>
 </html>
