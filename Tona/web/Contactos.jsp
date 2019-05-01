@@ -72,33 +72,6 @@
                                 <input class="form-control" type="text" id="localidad" name="localidad">
                             </div>
                         </div>
-                        <!--                        <div class="form-group">
-                                                    <br />
-                                                    <label>
-                                                        <span class="txt-label">* Nombre: <input type="text" name="nombre" id="nombre" class="form-control" autofocus /></span>
-                                                    </label><br /><label>
-                                                        <span class="tex-label">* Apellido: <input type="text" name="apellido" id="apellido" class="form-control" /></span>
-                                                    </label>
-                                                    <br />
-                                                    <label>
-                                                        <span class="tex-label">
-                                                            * E-mail:
-                                                            <input type="text" name="email" id="email" class="form-control" />
-                                                        </span>
-                                                    </label>
-                                                    <br />
-                                                    <label>
-                                                        * Telefono:
-                                                        <input type="text" name="telefono" id="telefono" class="form-control" />
-                                                    </label>
-                                                    <br />
-                                                    <label>
-                                                        * Localidad:
-                                                        <input type="text" name="localidad" id="localidad" class="form-control" />
-                                                    </label>
-                                                    <br />
-                                                    <p>* Datos obligatorios</p>
-                                                </div>-->
                     </div>
                     <div class="col-md-6">
                         <div class="form-contacts">
@@ -107,7 +80,7 @@
                                 <textarea class="form-control" name="comentario" rows="7" cols="40" id="comentario"></textarea>
                                 <small class="form-text txt-obligatorio">Campo Obligatorio</small>
                                 <div id="clear">
-                                    <input name="sumbit" type="submit" onclick="send()" class="button boton" id="sumbit_contacto" value="ENVIAR" />
+                                    <input name="sumbit" type="submit" class="button boton" id="sumbit_contacto" value="ENVIAR" />
                                     <p class="ocultar">
                                         Para comunicarte,completá el formulario, o envianos un mail a la siguiente dirección:
                                         <a href="mailto:tonaoficial@hotmail.com" class="linea">tonaoficial@hotmail.com</a>
