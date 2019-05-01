@@ -9,14 +9,12 @@
     <head>
         <meta charset="utf-8" http-equiv="Content-type" content="text/html">
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
-        <link rel="stylesheet" href="Content/stylegeneral.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/stylegalerias.css">
-        <!--        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <!--        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->        
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
-        <title>Galería</title>
-    </head>
+        <title>Galería</title>    </head>
     <body>
         <nav id='nav' class="navbar navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
@@ -49,7 +47,7 @@
                 </a>
             </div>
             <div id="imagen1">
-                <a href="Galeriaverano"><div id="info1">
+                <a href="ObtenerProductoPrimaVerano"><div id="info1">
                         <p id="headline1">PRIMAVERA/VERANO</p>
                         <p id="descripcion1">2018</p>
                     </div>
@@ -62,7 +60,7 @@
     <br>
     <br>
     <br>
-    
+
 
     <!--        <div class="container-fluid justify-content-center">
                 

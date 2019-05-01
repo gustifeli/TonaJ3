@@ -58,23 +58,13 @@
                                 <div class="mdc-card__action-icons">
                                     <button type="button" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" 
                                             id="btnEnviar" onclick="enviarMensaje(${p.idproducto}, '${p.descripcion}', ${p.idCampana})">send</button>
-                                            
+
                                 </div>
                             </div>
                         </div>
                     </li>
                 </c:forEach>
             </ul>
-            <!--            <div class="grid-container">
-            <c:forEach items="${producto}" var="p">
-                <div class="polaroid2">
-                    <img style="width:25%; height: 500px" src="ObtenerImagenGaleriaInvierno?cod=${p.idproducto}" alt="Imagen Producto">
-                    <div class="container2">
-                        <p><c:out value="${p.descripcion}"/></p>                                   
-                    </div>    
-                </div>
-            </c:forEach>
-        </div>-->
         </div>
 
         <!--Modal Enviar Mensaje-->
@@ -125,9 +115,9 @@
                         </div>
                         <div class="modal-footer">
                             <div id="clear">
-                                
-                                <input name="sumbit" type="submit" onclick="send()" class="button boton" id="sumbit_contacto" value="ENVIAR" />
-                                
+
+                                <input name="sumbit" type="submit" onclick="send()" class="btn btn-outline-dark" id="sumbit_contacto" value="ENVIAR" />
+
                                 <p class="ocultar">
                                     Para comunicarte,completá el formulario, o envianos un mail a la siguiente dirección:
                                     <a href="mailto:tonaoficial@hotmail.com" class="linea">tonaoficial@hotmail.com</a>
@@ -148,29 +138,21 @@
                 </div>
             </div>
         </nav>
- 
+
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-<!--        <script>
-                                    lightbox.option({
-                                        'resizeDuration': 200,
-                                        'wrapAround': true,
-                                        'alwaysShowNavOnTouchDevices': true,
-                                        'albumLabel': "",
-                                        'positionFromTop': 50
-                                    });
-        </script>-->
+
         <script>
-            function enviarMensaje(id, desc, idCampana) {
-                $(document).ready(function () {
+                                    function enviarMensaje(id, desc, idCampana) {
+                                        $(document).ready(function () {
 //                    $("#btnEnviar").click(function () {
-                    $("#modal-enviar").modal();
+                                            $("#modal-enviar").modal();
 //                    location.href = "ObtenerProductoMensaje?cod=" + id;
-                    document.getElementById("msj").value = 'Ingrese su consulta sobre el Producto: ' + desc + ' Cod.: ' + id + "...";
+                                            document.getElementById("msj").value = 'Ingrese su consulta sobre el Producto: ' + desc + ' Cod.: ' + id + "...";
 //                    });
-                });
-            }
+                                        });
+                                    }
         </script>
         <script>
 
