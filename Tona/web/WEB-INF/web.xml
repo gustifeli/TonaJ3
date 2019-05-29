@@ -64,6 +64,10 @@
         <servlet-name>IniciarSesion</servlet-name>
         <servlet-class>Servlets.IniciarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ObtenerProductoMensaje</servlet-name>
+        <servlet-class>Servlets.ObtenerProductoMensaje</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -120,6 +124,10 @@
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ObtenerProductoMensaje</servlet-name>
+        <url-pattern>/ObtenerProductoMensaje</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -139,10 +147,14 @@
     </context-param>
     <context-param>
         <param-name>pass</param-name>
-        <param-value>34885949*feli</param-value>
+        <param-value>**********</param-value>
     </context-param>
     <context-param>
         <param-name>user</param-name>
-        <param-value>gustifeli@hotmail.com</param-value>
+        <param-value>****************</param-value>
+    </context-param>
+    <context-param>
+        <param-name>destino</param-name>
+        <param-value>*****************</param-value>
     </context-param>
 </web-app>
