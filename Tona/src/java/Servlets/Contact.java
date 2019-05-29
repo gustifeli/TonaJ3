@@ -27,6 +27,8 @@ public class Contact extends HttpServlet {
     private String port;
     private String user;
     private String pass;
+    private String dest;
+            
     
     public void init() {
         ServletContext context = getServletContext();
@@ -34,6 +36,7 @@ public class Contact extends HttpServlet {
         port = context.getInitParameter("port");
         user = context.getInitParameter("user");
         pass = context.getInitParameter("pass");
+        dest = context.getInitParameter("destino");
     }
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -81,7 +84,7 @@ public class Contact extends HttpServlet {
             throws ServletException, IOException {
         HttpSession session=request.getSession();
         String content = "";
-        String recipient = "gustifeli@hotmail.com";
+        String recipient = dest;
         String subject = "Comentario Web: " + (request.getParameter("nombre") + " " + request.getParameter("apellido"));
         String inputMsj = request.getParameter("msj");
         String comentario = request.getParameter("comentario");
