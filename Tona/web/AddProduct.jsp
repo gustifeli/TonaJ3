@@ -20,7 +20,7 @@
     <body background="Image/prueba.jpg">
         <nav id='nav' class="navbar navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
-            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
+            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
