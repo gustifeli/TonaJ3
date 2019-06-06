@@ -25,7 +25,7 @@
 
         <nav id='nav' class="navbar  navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
-            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
+            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
 
             <div class="input-group-sm">
                 <input type="text" class="form-control" value="${sessionScope['sessionUser']}" disabled="true" aria-label="Username" aria-describedby="basic-addon1">

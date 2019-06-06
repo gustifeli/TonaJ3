@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width" initial-scale=1.0">
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/stylegalerias.css">
-        <!--        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
@@ -21,9 +21,9 @@
         <title>Galería</title>
     </head>
     <body>
-        <nav id='nav' class="navbar navbar-dark">
+        <nav id='nav' class="navbar navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
-            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui.png"></a>
+            <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -145,22 +145,13 @@
             <script>
                                     function enviarMensaje(id, desc, idCampana) {
                                         $(document).ready(function () {
-                                            //                    $("#btnEnviar").click(function () {
+//                    $("#btnEnviar").click(function () {
                                             $("#modal-enviar").modal();
-                                            //                    location.href = "ObtenerProductoMensaje?cod=" + id;
+//                    location.href = "ObtenerProductoMensaje?cod=" + id;
                                             document.getElementById("msj").value = 'Ingrese su consulta sobre el Producto: ' + desc + ' Cod.: ' + id + "...";
-                                            //                    });
+//                    });
                                         });
                                     }
-            </script>
-            <script>
-                lightbox.option({
-                    'resizeDuration': 200,
-                    'wrapAround': true,
-                    'alwaysShowNavOnTouchDevices': true,
-                    'albumLabel': "",
-                    'positionFromTop': 50
-                })
-            </script>
+        </script>
     </body>
 </html>
