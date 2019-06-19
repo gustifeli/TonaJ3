@@ -1,5 +1,5 @@
 /*Encabezado*/
-#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top:120px; margin-bottom: 20px;}
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Lucida Console'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 20px;}
 #encabezado:hover {opacity: 0.8;}
 /*Filtros*/
 .size-filter {border: 1px black solid; background: white;}
@@ -24,51 +24,21 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
 /*---------------------------*/
 /*   MASONRY GALLERY STYLE   */
 /*---------------------------*/
-.masonry-container-image{margin-bottom: 10%}
-
-/*.mdc-button{
-    @include mdc-button-base_;
-    @iclude mdc-button-ink-color(secundary);
-}*/
 
 .my-masonry-image-list {
     -webkit-column-count: 6;
     column-count: 5;
-    -webkit-column-gap: 16px;
-    column-gap: 16px;
-    max-width: 90%;
-}
-.mdc-image-list--masonry{
-    display: block;
-}
-.masonry-image-list .mdc-image-list__item{
-    margin-bottom: 16px;
-}
-.mdc-image-list--masonry .mdc-image-list__image{
-    display: block;
-    height: auto;
-}
-.mdc-image-list__image{
-    width: 100%;
-}
-.mdc-image-list__supporting{
-    padding: 16px 0;
-}
-.mdc-card{
-/*    background-color: black;*/
-    padding: 2px;
-    margin-left: 5px;
-    margin-bottom: 5px;
+    -webkit-column-gap: 15px;
+    column-gap: 15px;
+    max-width: 95%;
+    
 }
 
-.mdc-image-list__supporting{
-    color: black;
-    align-items: center;
-    text-align: center !important;
-    position: relative;
-    /*display: flex;*/
-    justify-content: center; 
-}
+.mdc-card{
+    padding: 2px;
+    margin-bottom: 5px;
+   }
+
 @media only screen and (max-width: 600px) {
     .my-masonry-image-list{
         column-count: 2;
@@ -76,12 +46,8 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
     .masonry-container-image{
         margin-bottom: 130px !important;
     }
-}
-.divisor {
-    border-top: 1px solid #bdbdbd;
-    margin: 10px; margin-right: 0px;
-    padding-top: 10px;
-}
+ 
+
 /*.mdc-card__action--icon:not(:disabled), .mdc-card__action--icon:focus {
      color: #BDBDBD !important;     
      background-color: transparent !important;

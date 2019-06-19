@@ -42,33 +42,33 @@
                 </div>
             </div>
         </nav>
-        <h1 id="contacto">Contacto</h1>
+        <h1 id="contacto">CONTACTO</h1>
         <div class="container-fluid">
             <form method="post" action="Contact">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="form-contacts">
                             <div class="form-group">
-                                <label>Nombre</label>
+                                <label id="label">Nombre</label>
                                 <input type="text" class="form-control" id="nombre" name="nombre"  required="true">
                                 <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
                             </div>
                             <div class="form-group">
-                                <label>Apellido</label>
+                                <label id="label">Apellido</label>
                                 <input class="form-control" type="text" id="apellido" name="apellido" required="true">
                                 <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
                             </div>
                             <div class="form-group">
-                                <label>Email</label>
+                                <label id="label">Email</label>
                                 <input class="form-control" type="text" id="email" name="email" required="true">
                                 <small id="emailHelp" class="form-text txt-obligatorio">Campo obligatorio.</small>
                             </div>
                             <div class="form-group">
-                                <label>Telefono</label>
+                                <label id="label">Telefono</label>
                                 <input class="form-control" type="text" id="telefono" name="telefono">
                             </div>
                             <div class="form-group">
-                                <label>Localidad</label>
+                                <label id="label">Localidad</label>
                                 <input class="form-control" type="text" id="localidad" name="localidad">
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                     <div class="col-md-6">
                         <div class="form-contacts">
                             <div class="form-group">
-                                <label>Mensaje</label>
+                                <label id="label">Mensaje</label>
                                 <textarea class="form-control" name="comentario" rows="7" cols="40" id="comentario"></textarea>
                                 <small class="form-text txt-obligatorio">Campo Obligatorio</small>
                                 <div id="clear">
