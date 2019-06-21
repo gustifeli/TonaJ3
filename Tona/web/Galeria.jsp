@@ -36,17 +36,38 @@
             </div>
         </nav>
         <h1 id="encabezado">GALERÍA</h1>
+    <center>
+        
+        <div class="container">
+    <img src="Image/invierno.JPG" class="image" style="width:100%" id="img0">
+    <a href="ObtenerProductoInvierno">
+  <div class="middle">
+    <div class="text">OTOÑO/INVIERNO</div>
+  </div>
+    </a>
+    </div>
+        <div class="container">
+     <img src="Image/primav.jpeg" class="image" style="width:100%" id="img1">
+    <a href="ObtenerProductoPrimaVerano">
+        <div class="middle">
+    <div class="text">PRIMAVERA/VERANO</div>
+  </div>
+    </a>
+        </div>
+        
+    </center>
+    
+<!--    <center><div class="container-fluid">
 
-    <center><div class="container-fluid">
-
-            <div id="imagen">
-                <a href="ObtenerProductoInvierno"><div id="info">
+            <div id="container">
+                <a href="ObtenerProductoInvierno">
+                    <div id="info">
                         <p id="headline">OTOÑO/INVIERNO</p>
                         <p id="descripcion">2018</p>
                     </div>
                 </a>
             </div>
-            <div id="imagen1">
+            <div id="container">
                 <a href="ObtenerProductoPrimaVerano"><div id="info1">
                         <p id="headline1">PRIMAVERA/VERANO</p>
                         <p id="descripcion1">2018</p>
@@ -54,7 +75,7 @@
                 </a>
             </div>
 
-        </div></center>
+        </div></center>-->
     <br>
     <br>
     <br>
@@ -90,7 +111,6 @@
             </div>
         </div>
     </nav>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
