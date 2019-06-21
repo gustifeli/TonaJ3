@@ -47,7 +47,7 @@ public class ObtenerImagenGaleriaInvierno extends HttpServlet {
                 RequestDispatcher rd = request.getRequestDispatcher("GaleriaInvierno.jsp");
                 rd.forward(request, response);
             } catch (Exception e) {
-                System.out.println("Error al cargar la imagen: " + e.getMessage());
+                System.out.println("SERV-OBT_IMG_INV: Error al cargar la imagen: " + e.getMessage());
             }
         } catch (Exception e) {
         }

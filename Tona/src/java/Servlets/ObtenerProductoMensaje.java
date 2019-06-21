@@ -6,7 +6,7 @@
 package Servlets;
 
 import Controlador.Data;
-import Modelos.Campana;
+import Modelos.Producto;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -15,13 +15,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author GustiFeli
+ * @author gusti
  */
-public class obtenerCampana extends HttpServlet {
+public class ObtenerProductoMensaje extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +35,14 @@ public class obtenerCampana extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         Data d = new Data();
-        HttpSession r = request.getSession(true);
         try {
-            ArrayList<Campana> campana = d.obtenerCampana();
-            request.setAttribute("campana", campana);
-            request.setAttribute("mensaje", r.getAttribute("msj"));
-            System.out.println("Mensaje: "+r.getAttribute("msj"));
-            RequestDispatcher rd =  request.getRequestDispatcher("AddProduct.jsp");
+            int cod = Integer.parseInt(request.getParameter("cod"));
+            ArrayList<Producto> prod = d.obtenerProductoCod(cod);
+            request.setAttribute("producto", prod);
+            RequestDispatcher rd = request.getRequestDispatcher("Contacto.jsp");
             rd.forward(request, response);
         } catch (Exception e) {
-            System.out.println("SERVLET: ERROR AL OBTENER LA CAMPANA" + e.getMessage());
+            System.out.println("SERVLET OBTENER-PROD-MSJ ERRROR: " + e);
         }
     }
 

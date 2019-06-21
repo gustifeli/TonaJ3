@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -21,20 +22,23 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "Contact", urlPatterns = {"/Contact"})
 public class Contact extends HttpServlet {
-
+    
     private String host;
     private String port;
     private String user;
     private String pass;
-
+    private String dest;
+            
+    
     public void init() {
         ServletContext context = getServletContext();
         host = context.getInitParameter("host");
         port = context.getInitParameter("port");
         user = context.getInitParameter("user");
         pass = context.getInitParameter("pass");
+        dest = context.getInitParameter("destino");
     }
-
+    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
@@ -78,33 +82,64 @@ public class Contact extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
-        String recipient = "gustifeli@hotmail.com";
-        String subject = "Comentario Web: " + (request.getParameter("nombre")+ " " + request.getParameter("apellido"));
-        String content = "Nombre: " + (request.getParameter("nombre"))
-                                        + "\nApellido: " + (request.getParameter("apellido"))
-                                        + "\nEmail: " + (request.getParameter("email"))
-                                        + "\nTeléfono: " + (request.getParameter("telefono")) 
-                                        + "\nLocalidad: " + (request.getParameter("localidad")) 
-                                        + "\nMensaje: " + (request.getParameter("comentario"));
-        
+        HttpSession session=request.getSession();
+        String content = "";
+        String recipient = dest;
+        String subject = "Comentario Web: " + (request.getParameter("nombre") + " " + request.getParameter("apellido"));
+        String inputMsj = request.getParameter("msj");
+        String comentario = request.getParameter("comentario");
+        String msj = "";
+       // System.out.println("id campana: " +(String) session.getAttribute("idCampana"));
+        //int idCampana = Integer.parseInt((String) session.getAttribute("idCampana"));
         String resultMessage = "";
-        
-        try {
-            Email.sendEmail(host, port, user, pass, recipient, subject, content);
-            //resultMessage = "El Mensaje se a enviado con éxito";
-            resultMessage = "0";
-        } catch (Exception e) {
-            e.printStackTrace();
-            //resultMessage = "Hubo un error: " + e.getMessage();
-            resultMessage = "1";
-        }finally{
-            request.setAttribute("msg", resultMessage);
-            getServletContext().getRequestDispatcher("/Contactos.jsp").forward(request, response);
+        if (inputMsj == null) {
+            content = "Nombre: " + (request.getParameter("nombre"))
+                    + "\nApellido: " + (request.getParameter("apellido"))
+                    + "\nEmail: " + (request.getParameter("email"))
+                    + "\nTeléfono: " + (request.getParameter("telefono"))
+                    + "\nLocalidad: " + (request.getParameter("localidad"))
+                    + "\nMensaje: " + comentario;
+            try {
+                Email.sendEmail(host, port, user, pass, recipient, subject, content);
+                //resultMessage = "El Mensaje se a enviado con éxito";
+                resultMessage = "0";
+            } catch (Exception e) {
+                e.printStackTrace();
+                //resultMessage = "Hubo un error: " + e.getMessage();
+                resultMessage = "1";
+            } finally {
+                request.setAttribute("msg", resultMessage);
+                getServletContext().getRequestDispatcher("/Contactos.jsp").forward(request, response);
 //            //response.sendRedirect("Contactos.jsp");
+            }
+        } else {
+            content = "Nombre: " + (request.getParameter("nombre"))
+                    + "\nApellido: " + (request.getParameter("apellido"))
+                    + "\nEmail: " + (request.getParameter("email"))
+                    + "\nTeléfono: " + (request.getParameter("telefono"))
+                    + "\nLocalidad: " + (request.getParameter("localidad"))
+                    + "\nProducto: " + inputMsj
+                    + "\nMensaje: " + comentario;
+            try {
+                Email.sendEmail(host, port, user, pass, recipient, subject, content);
+                //resultMessage = "El Mensaje se a enviado con éxito";
+                resultMessage = "0";
+            } catch (Exception e) {
+                e.printStackTrace();
+                //resultMessage = "Hubo un error: " + e.getMessage();
+                resultMessage = "1";
+            } finally {
+                request.setAttribute("msg", resultMessage);
+//            getServletContext().getRequestDispatcher("/Contactos.jsp").forward(request, response);
+//            //response.sendRedirect("Contactos.jsp");
+//                if (idCampana == 1) {
+//                    response.sendRedirect("ObtenerProductoInvierno");
+//                }
+            }
         }
-     }
-
+        
+    }
+    
     @Override
     public String getServletInfo() {
         return "Short description";

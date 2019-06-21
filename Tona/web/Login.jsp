@@ -71,14 +71,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Contraseña</span>
                         </div>
-                        <input type="text" name="pass" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" name="pass" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div>
                         <p style="color: #c9302c">${requestScope.msj}</p>
                     </div>
                     <div class="modal-footer" >
-                        <div class="col-md-12 text-center">
-                            <input type="submit" class="btn btn-outline-dark" value="Acceder">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-outline" value="Acceder">
                         </div>
                     </div>
                 </form>
