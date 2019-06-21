@@ -6,8 +6,8 @@
 .size-filter:active {border: 1px black solid; background: black; color: white;}
 .filters {padding-right: 10%;}
 /*TEST*/
-div#imagen {width: 300px; height: 370px; background-size: cover;/*sólo para ejemplo*/ background-image: url("../Image/invierno.JPG"); margin: 0px; display: inline-block;}
-div#imagen1 {width: 300px; height: 370px; background-size: cover;/*sólo para ejemplo*/ background-image: url("../Image/primav.jpeg"); margin: 0px; display: inline-block;}
+/*div#imagen {width: 300px; height: 370px; background-size: cover;sólo para ejemplo background-image: url("../Image/invierno.JPG"); margin: 0px; display: inline-block;}
+div#imagen1 {width: 300px; height: 370px; background-size: cover;sólo para ejemplo background-image: url("../Image/primav.jpeg"); margin: 0px; display: inline-block;}
 div#info {position:absolute; overflow:hidden; width: 300px; height: 370px; background-color: rgba(31, 31, 31, 0.9); opacity:0; transition: opacity 0.3s; color: white;}
 div#info1 {position:absolute; overflow:hidden; width: 300px; height: 370px; background-color: rgba(31, 31, 31, 0.9); opacity:0; transition: opacity 0.3s; color: white;}
 div#imagen:hover div#info {opacity:1;}
@@ -19,7 +19,49 @@ div#imagen1:hover p#headline1 {margin-left: 40px;}
 p#descripcion {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
 p#descripcion1 {font-size: 1rem; text-align: center; margin-top: 200px; transition: margin-top 0.4s; font-family:'Coco Gothic';}
 div#imagen:hover p#descripcion {margin-top: 75px;}
-div#imagen1:hover p#descripcion1 {margin-top: 75px;}
+div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
+.container {
+  position: relative;
+  width: 22%;
+  display: inline-block;
+}
+#img0{height: 375px;}
+#img1{height: 375px;}
+
+.image {
+  opacity: 1;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.container:hover .image {
+  opacity: 0.7;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #000;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
 
 /*---------------------------*/
 /*   MASONRY GALLERY STYLE   */
@@ -46,7 +88,14 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}
     .masonry-container-image{
         margin-bottom: 130px !important;
     }
- 
+}
+@media only screen and (max-width: 768px){
+    .container{ 
+        width: 90%;
+        display: block;
+        margin-bottom: 10px;
+    }
+}
 
 /*.mdc-card__action--icon:not(:disabled), .mdc-card__action--icon:focus {
      color: #BDBDBD !important;     
