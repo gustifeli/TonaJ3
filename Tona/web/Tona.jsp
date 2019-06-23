@@ -16,7 +16,7 @@
         <title>TONA</title>
     </head>
     <body>
-        <nav id='nav' class="navbar navbar-dark fixed-top">
+        <nav id='nav' class="navbar navbar-dark">
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
