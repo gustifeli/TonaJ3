@@ -1,6 +1,7 @@
 package Controlador;
 
 import Modelos.Campana;
+import Modelos.ImagenPortada;
 import Modelos.Producto;
 import Servlets.AddProd;
 import java.awt.Image;
@@ -26,11 +27,11 @@ public class Data {
     public Connection connection;
     public final static String UserDb = "root";
     public final static String Passdb = "34885949";
-    public final static String url = "jdbc:mysql://127.0.0.1:3306/tona?zeroDateTimeBehavior=CONVERT_TO_NULL";
+    public final static String url = "jdbc:mysql://localhost:3306/tona?zeroDateTimeBehavior=convertToNull&serverTimezone=UTC";
 
     //Contectar con la base de datos.
     public void conectar() throws SQLException, ClassNotFoundException {
-        Class.forName("com.mysql.jdbc.Driver");
+        Class.forName("com.mysql.cj.jdbc.Driver");
         //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/tonaWeb", UserDb, Passdb);
         connection = DriverManager.getConnection(url, UserDb, Passdb);
     }
@@ -66,6 +67,21 @@ public class Data {
         String sql = "Insert into usuario (user, pass) Values('" + user + "','MD5" + pass + "')";
         PreparedStatement ps = connection.prepareStatement(sql);
         ps.executeUpdate();
+    }
+    
+    public void agregarFotoPortada(ImagenPortada ip) throws SQLException{
+        try {
+            conectar();
+            String sql = "Insert into fotoportada(fotoPortada)Values(?)";
+            PreparedStatement ps = connection.prepareCall(sql);
+            InputStream is = ip.getInputStream();
+            ps.setBlob(1, is);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("Error Data: ( "+ e + " )");
+        }finally{
+            desconectar();
+        }
     }
 
     public void AddProduct(Producto p) throws SQLException {
