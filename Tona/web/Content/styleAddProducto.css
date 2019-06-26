@@ -39,7 +39,7 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 .btn-outline-dark:hover{background-color: black !important; color: black; border-color: black;}
 input.form-control[type=text]{background: transparent; width: 150px; border: 1px solid white; border-radius: 999em; padding: 4px; color: white; height: 40px; position: relative;}
 .input-group-sm input[type=text]{padding-left: 35px;}
-.input-group-sm{position: relative; margin-left: 60%;}
+.input-group-sm{position: relative; margin-left: 55%;}
 #user {top: 0; padding: 9px 8px; color: white; position: absolute; float: left;}
 #power{}
 

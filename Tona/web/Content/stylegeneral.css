@@ -21,3 +21,56 @@ div.upload {width: 157px; height: 57px; background-color: black; overflow: hidde
 div.upload input { display: block !important; width: 157px !important; height: 57px !important; opacity: 0 !important; overflow: hidden !important;}*/
 .background-admin{ background: url("/Tona/Image/prueba.jpg");
                     position: absolute; top: 0px; left: 0px; right: 0px; bottom: 0px; width: 100%; height: 100%; background-size: cover; background-repeat: no-repeat;  }
+
+
+/*MENU DESPLEGABLE*/
+.sidenav {
+                height: auto;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                right: 0;
+                background-color: #000;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidenav a {
+                padding: 4px 4px 4px 30px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidenav .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+            .closebtn:hover{
+                text-decoration: none;
+            }
+
+            @media screen and (max-height: 450px) {
+                .sidenav {padding-top: 15px;}
+                .sidenav a {font-size: 18px;}
+            }
+            .material-icons{color: #FFF;}
+            #txtmenu{
+                font-family: 'Lucida Console',sans-serif;
+                font-size: medium;
+            }
+            
+            #txtmenu:hover{
+                text-decoration: none; 
+            }
