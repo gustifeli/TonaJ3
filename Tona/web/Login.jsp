@@ -65,13 +65,13 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Usuario</span>
                         </div>
-                        <input type="text" name="name" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="text" name="name" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon1">Contraseña</span>
                         </div>
-                        <input type="password" name="pass" class="form-control" placeholder="Contraseña" aria-label="Username" aria-describedby="basic-addon1">
+                        <input type="password" name="pass" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div>
                         <p style="color: #c9302c">${requestScope.msj}</p>
