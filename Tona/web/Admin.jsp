@@ -56,7 +56,7 @@
                 </div>
             </div>
         </nav>
-        <h1 id="encabezadoAdmin"> Productos</h1>
+        <h1 id="encabezadoAdmin">Productos</h1>
         
         <div class="container-fluid">          
             <div class="panel-group table-wrapper-scroll-y">
