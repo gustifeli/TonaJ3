@@ -1,4 +1,4 @@
-<%-- 
+<%--
     Document   : Admin
     Created on : 17/08/2017, 19:29:55
     Author     : Julieta
@@ -22,8 +22,8 @@
         <title>All Products</title>
     </head>
     <body class="background-admin" style="background-attachment: fixed">
+        <nav id='nav' class="navbar navbar-dark fixed-top">
 
-        <nav id='nav' class="navbar  navbar-dark fixed-top">
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
 
@@ -31,68 +31,74 @@
                 <input type="text" class="form-control" value="${sessionScope['sessionUser']}" disabled="true" aria-label="Username" aria-describedby="basic-addon1">
                 <i id="user" class="material-icons sm-dark sm-inactive">account_circle</i>
                 <form action="Logout" method="post">
-                    <button id="botp" class="btn btn-danger btn-circle"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
-                </form> 
+                    <button id="botp" class="btn btn-danger btn-circle"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>
+                </form>
             </div>
-                
-               <form action="Logout" method="post">
-                    <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>                            
-              </form>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class=" navbar justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+            <form action="Logout" method="post">
+                <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>
+            </form>
+            <i class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                more_vert
+            </i>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="txtmenu" href="Galeria.jsp">GALERIA</a>
+                <a id="txtmenu" href="Contactos.jsp">CONTACTO</a>
             </div>
+            <!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class=" navbar justify-content-end">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>-->
         </nav>
         <h1 id="encabezadoAdmin"> Productos</h1>
-        
-        <div class="container-fluid">          
+
+        <div class="container-fluid">
             <div class="panel-group table-wrapper-scroll-y">
-                <button onclick="location.href='obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>              
+                <button onclick="location.href = 'obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>
                 <div class="table-responsive">
                     <table class="table">
-                    <thead class="thead-dark" >
-                        <tr>
-                            <th hidden="true" scope="col">Cod.</th>
-                            <th class="rowWidth" scope="col">Imagen</th>
-                            <th style="width: 60%" scope="col">Descripción</th>
-                            <th hidden="true" scope="col">CodCamp</th>
-                            <th scope="col">Campaña</th>
-                            <th class="rowWidth" scope="col"></th>
-                            <th class="rowWidth" scope="col"></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach items="${producto}" var="p">
+                        <thead class="thead-dark" >
                             <tr>
-                                <td hidden="true"><c:out value="${p.idproducto}"/></td>
-                                <td><img style="width: 70px" src="ObtenerImagen?cod=${p.idproducto}" alt="imagenProducto"></td>
-                                <td><c:out value="${p.descripcion}"/></td>
-                                <td hidden="true"><c:out value="${p.idCampana}"/></td>
-                                <td><c:out value="${p.campana}"/></td>
-                                <!--<td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>-->
-                                <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
-
-                                <!--START TEST-->
-                                <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">edit</i></button></td>
-                                <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">delete_sweep</i></button></td>
-                                <!--END TEST-->
+                                <th hidden="true" scope="col">Cod.</th>
+                                <th class="rowWidth" scope="col">Imagen</th>
+                                <th style="width: 60%" scope="col">Descripción</th>
+                                <th hidden="true" scope="col">CodCamp</th>
+                                <th scope="col">Campaña</th>
+                                <th class="rowWidth" scope="col"></th>
+                                <th class="rowWidth" scope="col"></th>
                             </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${producto}" var="p">
+                                <tr>
+                                    <td hidden="true"><c:out value="${p.idproducto}"/></td>
+                                    <td><img style="width: 70px" src="ObtenerImagen?cod=${p.idproducto}" alt="imagenProducto"></td>
+                                    <td><c:out value="${p.descripcion}"/></td>
+                                    <td hidden="true"><c:out value="${p.idCampana}"/></td>
+                                    <td><c:out value="${p.campana}"/></td>
+                                    <!--<td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>-->
+                                    <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
+
+                                    <!--START TEST-->
+                                    <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">edit</i></button></td>
+                                    <td><button id="btnEliminar" class="btn btn-outline-danger" onclick="alerta(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">delete_sweep</i></button></td>
+                                    <!--END TEST-->
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -102,7 +108,7 @@
                     <nav id="nav" class=" navbar-inverse">
                         <div id="txtfooter">
                             <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
-                            <div class="text-center img"> 
+                            <div class="text-center img">
                             </div>
                         </div>
                     </nav>
@@ -129,5 +135,16 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+        <script>
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "150px";
+        }
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginRight = "0";
+         document.body.style.backgroundColor = "white";
+     }
+        </script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </body>
 </html>

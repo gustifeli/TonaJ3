@@ -25,7 +25,7 @@ div.upload input { display: block !important; width: 157px !important; height: 5
 
 /*MENU DESPLEGABLE*/
 .sidenav {
-                height: 70%;
+                height: auto;
                 width: 0;
                 position: fixed;
                 z-index: 1;
