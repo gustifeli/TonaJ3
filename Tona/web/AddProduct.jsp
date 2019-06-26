@@ -14,28 +14,40 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/styleAddProducto.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="shortcut icon" href="Image/imgsolapa.png" type="image/png"/>
         <title>+ - Producto</title>
     </head>
     <body background="Image/prueba.jpg">
         <nav id='nav' class="navbar navbar-dark fixed-top">
+
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class=" navbar justify-content-end">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
+
+            <i class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                more_vert
+            </i>
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a id="txtmenu" href="Galeria.jsp">GALERIA</a>
+                <a id="txtmenu" href="Contactos.jsp">CONTACTO</a>
             </div>
+            <!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+            
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <div class=" navbar justify-content-end">
+                                <ul class="navbar-nav">
+                                    <li class="nav-item active">
+                                        <a class="aTxtColor" href="Galeria.jsp">Galeria</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="aTxtColor" href="Contactos.jsp">Contacto</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>-->
         </nav>
         <div class="modals">
             <div class="container-fluid">
@@ -174,5 +186,16 @@
                 output.src = URL.createObjectURL(event.target.files[0]);
             };
         </script>
+        <script>
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "150px";
+        }
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginRight = "0";
+         document.body.style.backgroundColor = "white";
+     }
+        </script> 
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </body>
 </html>
