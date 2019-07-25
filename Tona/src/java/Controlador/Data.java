@@ -72,8 +72,8 @@ public class Data {
     public void agregarFotoPortada(ImagenPortada ip) throws SQLException{
         try {
             conectar();
-            String sql = "Insert into fotoportada(fotoPortada)Values(?)";
-            PreparedStatement ps = connection.prepareCall(sql);
+            String sql = "Insert into fotoportada(fotoportada)Values(?)";
+            PreparedStatement ps = connection.prepareStatement(sql);
             InputStream is = ip.getInputStream();
             ps.setBlob(1, is);
             ps.executeUpdate();
@@ -83,6 +83,76 @@ public class Data {
             desconectar();
         }
     }
+    public void eliminarPortada(int cod) {
+        try {
+            conectar();
+            Statement st = connection.createStatement();
+            String sql = "delete from fotoportada where idFoto=" + cod;
+            st.executeUpdate(sql);
+            st.close();
+        } catch (Exception e) {
+            System.out.println("Error al eliminar la portada: " + e);
+        } finally {
+            desconectar();
+        }
+    }
+    public ArrayList<ImagenPortada> obtenerPortada() {
+        ArrayList<ImagenPortada> port = new ArrayList<>();
+        try {
+            conectar();
+//            String sql = "Select idProducto, descripcion, imagen, idCampana from producto";
+            String sql = "select idFoto, fotoPortada from fotoportada";
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                ImagenPortada i = new ImagenPortada();
+                i.setIdFotoPortada(rs.getInt(1));
+                InputStream img = rs.getBinaryStream(2);
+               i.setInputStream(img);
+               port.add(i);
+                
+            }
+            rs.close();
+            st.close();
+            return port;
+        } catch (Exception e) {
+            System.out.println("Data: Error al obtener portada: " + e);
+        } finally {
+            desconectar();
+        }
+        return port;
+    }
+    public byte[] obtenerImagenPort(int cod) {
+        byte[] imagenbyte = null;
+        try {
+            conectar();
+            String sql = "select fotoPortada from fotoportada where idFoto=" + cod;
+            Statement st = connection.createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            while (rs.next()) {
+                Blob blob = rs.getBlob("fotoPortada");
+                if (blob != null) {
+                    InputStream inputStream = blob.getBinaryStream();
+                    int size = (int) blob.length();
+                    imagenbyte = new byte[size];
+                    int length = -1;
+                    int k = 0;
+                    try {
+                        inputStream.read(imagenbyte, 0, size);
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+            }
+        } catch (Exception e) {
+            return null;
+        } finally {
+            desconectar();
+        }
+        return imagenbyte;
+    }
+    
+
 
     public void AddProduct(Producto p) throws SQLException {
         try {
