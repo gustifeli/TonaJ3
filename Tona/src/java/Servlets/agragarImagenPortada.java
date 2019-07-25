@@ -10,7 +10,9 @@ import Modelos.ImagenPortada;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -21,6 +23,7 @@ import javax.servlet.http.Part;
  *
  * @author gusti
  */
+@MultipartConfig
 public class agragarImagenPortada extends HttpServlet {
 
     /**
@@ -35,7 +38,7 @@ public class agragarImagenPortada extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -65,20 +68,24 @@ public class agragarImagenPortada extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-        
+
         try {
             HttpSession hs = request.getSession(true);
             ImagenPortada ip = new ImagenPortada();
-            Part filepart = request.getPart("logo");
+            Part filepart = request.getPart("imgPort");
             int fotoSize = (int) filepart.getSize();
-            
+
             InputStream is = null;
             is = filepart.getInputStream();
-            if (fotoSize>0){
+            if (fotoSize > 0) {
                 ip.setInputStream(is);
-                Data d = new Data();
-                d.agregarFotoPortada(ip);
             }
+            Data d = new Data();
+            d.agregarFotoPortada(ip);
+            request.getSession().setAttribute("msj", "¡El producto se agrego correctamente!");
+            ip.setFotoPortada(null);
+            RequestDispatcher rd = request.getRequestDispatcher("obtenerPortada");
+            rd.include(request, response);
         } catch (Exception e) {
             System.out.println("Error Servlet agregar Imagen portada: " + e);
             response.sendRedirect("ListaProducto");
