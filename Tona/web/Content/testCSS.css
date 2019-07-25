@@ -4,10 +4,6 @@
 */
 
 
-.mdc-button{
-    @include mdc-button-base_;
-    @iclude mdc-button-ink-color(secundary);
-}
 
 .my-masonry-image-list {
     -webkit-column-count: 6;

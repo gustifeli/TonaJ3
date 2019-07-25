@@ -41,6 +41,7 @@ public class ObtenerImagenGaleriaPrimaVerano extends HttpServlet {
             if (imagen!=null) {
                 ServletOutputStream out = response.getOutputStream();
                 out.write(imagen);
+               
             }else{
                 System.out.println("Error al crear imagen");
             }
