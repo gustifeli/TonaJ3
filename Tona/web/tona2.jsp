@@ -23,7 +23,9 @@
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
-            <i class="material-icons justify-content-end" style="font-size:30px; cursor:pointer" onclick="openNav()">more_vert</i>
+            <i id="menus" class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+                more_vert
+            </i>
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a id="txtmenu" href="Galeria.jsp">GALERIA</a>
@@ -33,10 +35,10 @@
         <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <c:forEach items="${portada}" var="p" varStatus="status">
-<!--                    <ol class="carousel-indicators">
-                        <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="<c:if test='${status.first}'>active</c:if>"></li>
-                    </ol>-->
-                    <div class="carousel-item <c:if test='${status.first}'>active</c:if>">
+                    <!--                    <ol class="carousel-indicators">
+                                            <li data-target="#carouselExampleSlidesOnly" data-slide-to="0" class="<c:if test='${status.first}'>active</c:if>"></li>
+                                        </ol>-->
+                        <div class="carousel-item <c:if test='${status.first}'>active</c:if>">
                         <img class="d-block w-100" src="ObtenerImagenPortada?cod=${p.idFotoPortada}" alt="First slide">
                     </div>
                 </c:forEach>
