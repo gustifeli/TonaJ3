@@ -27,4 +27,9 @@ Constraint fk_prod_Camp foreign key (idCampana) references Campana(idCampana)
 
 
 insert into campana (descripcion) value ('Otoño Invierno');
-insert into campana (descripcion) value ('Primaver Verano')
+insert into campana (descripcion) value ('Primaver Verano');
+
+CREATE TABLE `tona`.`fotoportada` (
+  `idFoto` INT NOT NULL,
+  `fotoPortada` BLOB NULL,
+  PRIMARY KEY (`idFoto`));

@@ -6,25 +6,20 @@
 package Servlets;
 
 import Controlador.Data;
-import Modelos.ImagenPortada;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
 
 /**
  *
  * @author gusti
  */
-@MultipartConfig
-public class agragarImagenPortada extends HttpServlet {
+public class CargarImagenPortada extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,7 +33,26 @@ public class agragarImagenPortada extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
+       try {
+            response.setContentType("image/jpeg");
+            Data d = new Data();
+            try {
+                int cod = Integer.parseInt(request.getParameter("cod"));
+                byte[] imagen = d.obtenerImagenPort(cod);
+                if (imagen != null) {
+                    ServletOutputStream out = response.getOutputStream();
+                    
+                    out.write(imagen);out.flush();out.close();
+                } else {
+                    System.out.println("ERror");
+                }                
+                RequestDispatcher rd = request.getRequestDispatcher("tona2.jsp");
+                rd.forward(request, response);
+            } catch (Exception e) {
+                System.out.println("SERV-cargar imagen portada: Error al cargar la imagen: " + e.getMessage());
+            }
+        } catch (Exception e) {
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -68,28 +82,6 @@ public class agragarImagenPortada extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
-
-        try {
-            HttpSession hs = request.getSession(true);
-            ImagenPortada ip = new ImagenPortada();
-            Part filepart = request.getPart("imgPort");
-            int fotoSize = (int) filepart.getSize();
-
-            InputStream is = null;
-            is = filepart.getInputStream();
-            if (fotoSize > 0) {
-                ip.setInputStream(is);
-            }
-            Data d = new Data();
-            d.agregarFotoPortada(ip);
-            request.getSession().setAttribute("msj", "¡El producto se agrego correctamente!");
-            ip.setFotoPortada(null);
-            RequestDispatcher rd = request.getRequestDispatcher("obtenerPortada");
-            rd.include(request, response);
-        } catch (Exception e) {
-            System.out.println("Error Servlet agregar Imagen portada: " + e);
-            response.sendRedirect("ListaProducto");
-        }
     }
 
     /**

@@ -64,6 +64,34 @@
         <servlet-name>IniciarSesion</servlet-name>
         <servlet-class>Servlets.IniciarSesion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ObtenerProductoMensaje</servlet-name>
+        <servlet-class>Servlets.ObtenerProductoMensaje</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>agragarImagenPortada</servlet-name>
+        <servlet-class>Servlets.agragarImagenPortada</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ObtenerImagenPortada</servlet-name>
+        <servlet-class>Servlets.ObtenerImagenPortada</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>obtenerPortada</servlet-name>
+        <servlet-class>Servlets.obtenerPortada</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EliminarPortada</servlet-name>
+        <servlet-class>Servlets.EliminarPortada</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CargarPortada</servlet-name>
+        <servlet-class>Servlets.CargarPortada</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CargarImagenPortada</servlet-name>
+        <servlet-class>Servlets.CargarImagenPortada</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>dispatcher</servlet-name>
         <url-pattern>*.htm</url-pattern>
@@ -120,6 +148,34 @@
         <servlet-name>IniciarSesion</servlet-name>
         <url-pattern>/IniciarSesion</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ObtenerProductoMensaje</servlet-name>
+        <url-pattern>/ObtenerProductoMensaje</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>agragarImagenPortada</servlet-name>
+        <url-pattern>/agragarImagenPortada</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ObtenerImagenPortada</servlet-name>
+        <url-pattern>/ObtenerImagenPortada</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>obtenerPortada</servlet-name>
+        <url-pattern>/obtenerPortada</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EliminarPortada</servlet-name>
+        <url-pattern>/EliminarPortada</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CargarPortada</servlet-name>
+        <url-pattern>/CargarPortada</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CargarImagenPortada</servlet-name>
+        <url-pattern>/CargarImagenPortada</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             10
@@ -139,10 +195,14 @@
     </context-param>
     <context-param>
         <param-name>pass</param-name>
-        <param-value>34885949*feli</param-value>
+        <param-value>**********</param-value>
     </context-param>
     <context-param>
         <param-name>user</param-name>
-        <param-value>gustifeli@hotmail.com</param-value>
+        <param-value>****************</param-value>
+    </context-param>
+    <context-param>
+        <param-name>destino</param-name>
+        <param-value>*****************</param-value>
     </context-param>
 </web-app>

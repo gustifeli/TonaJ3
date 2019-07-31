@@ -16,9 +16,11 @@
     <head>
         <title>Login</title>
         <meta charset="UTF-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" href="Content/bootstrap.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
         <link type="text/css" href="Content/styleLogReg.css" rel="stylesheet">
     </head>
     <!--    <body>
@@ -58,22 +60,25 @@
             <div class="modal-body">
                 <img src="Image/TONAlogin.png" >
                 <p style="color: #c9302c">${sessionScope['error']}</p>
-
                 <form action="IniciarSesion" method="post">
-                    <div class="input-group">
-                            <span class="input-group-addon">Usuario</span>
-                        <input name="name" type="text" class="form-control">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Usuario</span>
+                        </div>
+                        <input type="text" name="name" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="input-group">
-                            <span class="input-group-addon">Contraseña</span>
-                        <input name="pass" type="text" class="form-control">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Contraseña</span>
+                        </div>
+                        <input type="password" name="pass" class="form-control"  aria-label="Username" aria-describedby="basic-addon1">
                     </div>
                     <div>
                         <p style="color: #c9302c">${requestScope.msj}</p>
                     </div>
                     <div class="modal-footer" >
-                        <div class="col-md-12 text-center">
-                            <input type="submit" class="btn btn-outline-dark" value="Acceder">
+                        <div class="col-md-12">
+                            <input type="submit" class="btn btn-outline" value="Acceder">
                         </div>
                     </div>
                 </form>

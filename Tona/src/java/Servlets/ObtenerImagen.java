@@ -44,6 +44,7 @@ public class ObtenerImagen extends HttpServlet {
             if (imagen != null) {
                 ServletOutputStream out = response.getOutputStream();
                 out.write(imagen);
+                
             }else{
                 System.out.println("ERror");
             }

@@ -41,9 +41,10 @@ public class ObtenerImagenGaleriaInvierno extends HttpServlet {
                 if (imagen != null) {
                     ServletOutputStream out = response.getOutputStream();
                     out.write(imagen);
+                    
                 } else {
                     System.out.println("ERror");
-                }
+                }                
                 RequestDispatcher rd = request.getRequestDispatcher("GaleriaInvierno.jsp");
                 rd.forward(request, response);
             } catch (Exception e) {

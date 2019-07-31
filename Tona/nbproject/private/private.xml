@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/java/Servlets/obtenerImgPortada.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>35</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/web/modalImgCarousel.jsp</file>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/web/tona2.jsp</file>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/src/java/Servlets/CargarPortada.java</file>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/web/Content/StylePortada.css</file>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/src/java/Servlets/CargarImagenPortada.java</file>
+            <file>file:/C:/Users/gusti/Documents/Desarrollo/Proyecto%20TonaWeb/TonaJ3/Tona/src/java/Servlets/ObtenerImagenPortada.java</file>
+        </group>
     </open-files>
 </project-private>
