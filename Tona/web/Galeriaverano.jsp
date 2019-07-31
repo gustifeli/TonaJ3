@@ -26,7 +26,7 @@
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
 
-            <i class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i id="menus" class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
                 more_vert
             </i>
             <div id="mySidenav" class="sidenav">
