@@ -68,8 +68,6 @@
                 <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPortada">
                                     Nueva Portada
                                 </button>-->
-                <div class="container-fluid">
-                    <div class="panel-group table-wrapper-scroll-y">
                         <button class=" btn btn-outline-secondary" onclick="location.href = 'obtenerPortada'" type="button" style="float: right; display: inline-block !Important; margin-bottom: 3px; height: 40px; margin-left: 5px;"> + Portada</button>
                         <button onclick="location.href = 'obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>
                         <div class="table-responsive">
