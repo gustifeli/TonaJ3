@@ -69,6 +69,9 @@
                                     Nueva Portada
                                 </button>-->
                 <button class=" btn btn-outline-secondary" onclick="location.href = 'obtenerPortada'" type="button"> + Portada</button>
+        <h1 id="encabezadoAdmin"> Productos</h1>
+        <div class="container-fluid">
+            <div class="panel-group table-wrapper-scroll-y">
                 <button onclick="location.href = 'obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>
                 <div class="table-responsive">
                     <table class="table">
@@ -76,9 +79,9 @@
                             <tr>
                                 <th hidden="true" scope="col">Cod.</th>
                                 <th class="rowWidth" scope="col">Imagen</th>
-                                <th style="width: 60%" scope="col">Descripción</th>
+                                <th style="width: 60%" scope="col">DescripciÃ³n</th>
                                 <th hidden="true" scope="col">CodCamp</th>
-                                <th scope="col">Campaña</th>
+                                <th scope="col">CampaÃ±a</th>
                                 <th class="rowWidth" scope="col"></th>
                                 <th class="rowWidth" scope="col"></th>
                             </tr>
@@ -163,15 +166,15 @@
         <script>
 
             function alerta(id) {
-                var p = confirm("¿Esta seguro que desea eliminar el producto?");
+                var p = confirm("Â¿Esta seguro que desea eliminar el producto?");
                 if (p == true) {
                     location.href = "EliminarProducto?cod=" + id;
-                    alert("¡El producto se elimino con éxito!");
+                    alert("Â¡El producto se elimino con Ã©xito!");
                 }
             }
 
             function modifAlert(id) {
-                var p = confirm("¿Esta seguro que desea modificar el producto?");
+                var p = confirm("Â¿Esta seguro que desea modificar el producto?");
                 if (p == true) {
                     location.href = "BuscarProductoCod?cod=" + id;
                 }
@@ -188,6 +191,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <script>
+
             function openNav() {
                 document.getElementById("mySidenav").style.width = "150px";
             }
@@ -196,8 +200,17 @@
                 document.getElementById("main").style.marginRight = "0";
                 document.body.style.backgroundColor = "white";
             }
-        </script>
-        
+        </script>        
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+     function openNav() {
+         document.getElementById("mySidenav").style.width = "150px";
+        }
+     function closeNav() {
+         document.getElementById("mySidenav").style.width = "0";
+         document.getElementById("main").style.marginRight = "0";
+         document.body.style.backgroundColor = "white";
+     }
+        </script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </body>
 </html>
