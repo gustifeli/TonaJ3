@@ -68,6 +68,7 @@
                 <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPortada">
                                     Nueva Portada
                                 </button>-->
+
                 <button class=" btn btn-outline-secondary" onclick="location.href = 'obtenerPortada'" type="button" style="float: right; display: inline-block !Important; margin-bottom: 3px; height: 40px; margin-left: 5px;"> + Portada</button>
                 <button onclick="location.href = 'obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>
                 <div class="table-responsive">
@@ -76,9 +77,9 @@
                             <tr>
                                 <th hidden="true" scope="col">Cod.</th>
                                 <th class="rowWidth" scope="col">Imagen</th>
-                                <th style="width: 60%" scope="col">Descripci�n</th>
+                                <th style="width: 60%" scope="col">Descripción</th>
                                 <th hidden="true" scope="col">CodCamp</th>
-                                <th scope="col">Campa�a</th>
+                                <th scope="col">Campaña</th>
                                 <th class="rowWidth" scope="col"></th>
                                 <th class="rowWidth" scope="col"></th>
                             </tr>
@@ -93,6 +94,7 @@
                                     <td><c:out value="${p.campana}"/></td>
                                     <!--<td><form action="BuscarProductoCod?cod=${p.idproducto}" method="post"><button role="button" class="btn btn-outline-primary" type="submit">Editar</button></form></td>-->
                                     <!--<td><form action="EliminarProducto?cod=${p.idproducto}" method="post"><button role="button" id="btnEliminar" class="btn btn-outline-danger" type="submit">Eliminar</button></form></td>-->
+
 
                                     <!--START TEST-->
                                     <td><button id="btnModif" class="btn btn-outline-primary" onclick="modifAlert(${p.idproducto})" value="${p.idproducto}"><i class="material-icons">edit</i></button></td>
@@ -163,15 +165,15 @@
         <script>
 
             function alerta(id) {
-                var p = confirm("¿Esta seguro que desea eliminar el producto?");
+                var p = confirm("Â¿Esta seguro que desea eliminar el producto?");
                 if (p == true) {
                     location.href = "EliminarProducto?cod=" + id;
-                    alert("¡El producto se elimino con éxito!");
+                    alert("Â¡El producto se elimino con Ã©xito!");
                 }
             }
 
             function modifAlert(id) {
-                var p = confirm("¿Esta seguro que desea modificar el producto?");
+                var p = confirm("Â¿Esta seguro que desea modificar el producto?");
                 if (p == true) {
                     location.href = "BuscarProductoCod?cod=" + id;
                 }
