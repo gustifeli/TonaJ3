@@ -107,7 +107,7 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
 }
 @media only screen and (min-width: 769px){
     .container{ 
-        width: 22%;
+        width: 21%;
         display: inline-block;
         margin-bottom: 10px;
     }
@@ -120,6 +120,13 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
     }
 }
 @media only screen and (min-width: 1439px){
+    .container{ 
+        width: 21%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 1900px){
     .container{ 
         width: 15%;
         display: inline-block;
