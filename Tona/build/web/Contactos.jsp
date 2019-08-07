@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/stylecontacto.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
         <!--<link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
@@ -29,7 +31,7 @@
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
 
-            <i class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <i id="menus" class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
                 more_vert
             </i>
             <div id="mySidenav" class="sidenav">
