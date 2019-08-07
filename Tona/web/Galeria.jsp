@@ -51,7 +51,7 @@
     <center>
 
         <div class="container">
-            <img src="Image/invierno.JPG" class="image" style="width:100%" id="img0">
+            <img src="Image/invierno.JPG" class="image" style="" id="img0">
             <a href="ObtenerProductoInvierno">
                 <div class="middle">
                     <div class="text">OTOÑO/INVIERNO</div>
@@ -59,7 +59,7 @@
             </a>
         </div>
         <div class="container">
-            <img src="Image/primav.jpeg" class="image" style="width:100%" id="img1">
+            <img src="Image/primav.jpeg" class="image" style="" id="img1">
             <a href="ObtenerProductoPrimaVerano">
                 <div class="middle">
                     <div class="text">PRIMAVERA/VERANO</div>
