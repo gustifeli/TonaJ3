@@ -12,6 +12,8 @@
         <link rel="stylesheet" href="Content/stylegeneral.css">
         <link rel="stylesheet" href="Content/stylecontacto.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
         <!--<link type="text/css" href="Content/bootstrap.css" rel="stylesheet">-->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="icon" type="image/png" href="Image/imgsolapa.png" />
