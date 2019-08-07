@@ -65,7 +65,7 @@ div.upload input { display: block !important; width: 157px !important; height: 5
                 .sidenav {padding-top: 15px;}
                 .sidenav a {font-size: 18px;}
             }
-            .material-icons{color: #FFF;}
+            #menus{color: #FFF;}
             #txtmenu{
                 font-family: 'Lucida Console',sans-serif;
                 font-size: medium;

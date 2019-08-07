@@ -34,10 +34,10 @@
                     <button id="botp" class="btn btn-danger btn-circle"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>
                 </form>
             </div>
-            <form action="Logout" method="post">
-                <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>
-            </form>
-            <i class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
+            <!--            <form action="Logout" method="post">
+                            <button id="btn-circle" class="btn btn-default"  type="submit"><i id="power" class="material-icons sm-dark sm-inactive">power_settings_new</i></button>
+                        </form>-->
+            <i id="menus" class="material-icons justify-content-end" style="font-size:30px;cursor:pointer" onclick="openNav()">
                 more_vert
             </i>
             <div id="mySidenav" class="sidenav">
@@ -68,7 +68,7 @@
                 <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPortada">
                                     Nueva Portada
                                 </button>-->
-                <button class=" btn btn-outline-secondary" onclick="location.href = 'obtenerPortada'" type="button"> + Portada</button>
+                <button class=" btn btn-outline-secondary" onclick="location.href = 'obtenerPortada'" type="button" style="float: right; display: inline-block !Important; margin-bottom: 3px; height: 40px; margin-left: 5px;"> + Portada</button>
                 <button onclick="location.href = 'obtenerCampana'" type="button" class="btn btn-outline-primary" style="float: right;  display: inline-block !Important; margin-bottom: 3px; height: 40px; border-radius: 5px;"><i class="material-icons">add_circle_outline</i></button>
                 <div class="table-responsive">
                     <table class="table">
@@ -163,15 +163,15 @@
         <script>
 
             function alerta(id) {
-                var p = confirm("¿Esta seguro que desea eliminar el producto?");
+                var p = confirm("Â¿Esta seguro que desea eliminar el producto?");
                 if (p == true) {
                     location.href = "EliminarProducto?cod=" + id;
-                    alert("¡El producto se elimino con éxito!");
+                    alert("Â¡El producto se elimino con Ã©xito!");
                 }
             }
 
             function modifAlert(id) {
-                var p = confirm("¿Esta seguro que desea modificar el producto?");
+                var p = confirm("Â¿Esta seguro que desea modificar el producto?");
                 if (p == true) {
                     location.href = "BuscarProductoCod?cod=" + id;
                 }
@@ -188,6 +188,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
         <script>
+
             function openNav() {
                 document.getElementById("mySidenav").style.width = "150px";
             }
@@ -196,8 +197,8 @@
                 document.getElementById("main").style.marginRight = "0";
                 document.body.style.backgroundColor = "white";
             }
-        </script>
-        
+        </script>        
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
         <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     </body>
 </html>

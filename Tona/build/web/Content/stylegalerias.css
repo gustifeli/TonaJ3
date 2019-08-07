@@ -23,46 +23,46 @@ p#descripcion1 {font-size: 1rem; text-align: center; margin-top: 200px; transiti
 div#imagen:hover p#descripcion {margin-top: 75px;}
 div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
 .container {
-  position: relative;
-  width: 21%;
-  display: inline-block;
+    position: relative;
+    width: 21%;
+    display: inline-block;
 }
 #img0{height: 375px;}
 #img1{height: 375px;}
 
 .image {
-  opacity: 1;
-  width: 100%;
-  height: auto;
-  transition: .5s ease;
-  backface-visibility: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
+    opacity: 1;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.6);
 }
 
 .middle {
-  transition: .5s ease;
-  opacity: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%)
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%)
 }
 
 .container:hover .image {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .container:hover .middle {
-  opacity: 1;
+    opacity: 1;
 }
 
 .text {
-  background-color: #000;
-  border-radius: 6px;
-  color: white;
-  font-size: 16px;
-  padding: 16px 32px;
+    background-color: #000;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
 }
 
 /*---------------------------*/
@@ -75,13 +75,13 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
     -webkit-column-gap: 15px;
     column-gap: 15px;
     max-width: 95%;
-    
+
 }
 
 .mdc-card{
     padding: 2px;
     margin-bottom: 5px;
-   }
+}
 
 @media only screen and (max-width: 600px) {
     .my-masonry-image-list{
@@ -91,14 +91,41 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
         margin-bottom: 130px !important;
     }
 }
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 767px){
     .container{ 
-        width: 80%;
+        width: 85%;
         display: block;
         margin-bottom: 10px;
     }
 }
-
+@media only screen and (min-width: 768px){
+    .container{ 
+        width: 40%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 769px){
+    .container{ 
+        width: 22%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 1023px){
+    .container{ 
+        width: 27%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 1439px){
+    .container{ 
+        width: 15%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
 /*.mdc-card__action--icon:not(:disabled), .mdc-card__action--icon:focus {
      color: #BDBDBD !important;     
      background-color: transparent !important;
