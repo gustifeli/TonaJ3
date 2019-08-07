@@ -114,7 +114,7 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
 }
 @media only screen and (min-width: 1023px){
     .container{ 
-        width: 27%;
+        width: 23%;
         display: inline-block;
         margin-bottom: 10px;
     }
