@@ -21,8 +21,8 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <title>All Products</title>
     </head>
-    <body class="background-admin" style="background-attachment: fixed">
-        <nav id='nav' class="navbar navbar-dark fixed-top">
+    <body class="background-admin" style="background-attachment: fixed;">
+        <nav id='nav' class="navbar navbar-dark">
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
@@ -62,7 +62,7 @@
                             </div>
                         </div>-->
         </nav>
-        <h1 id="encabezadoAdmin">Productos</h1>      
+        <h1 id="encabezadoAdmin">PRODUCTOS</h1>      
         <div class="container-fluid">         
             <div class="panel-group table-wrapper-scroll-y">
                 <!--                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPortada">
@@ -75,7 +75,7 @@
                     <table class="table">
                         <thead class="thead-dark" >
                             <tr>
-                                <th hidden="true" scope="col">Cod.</th>
+                                <th hidden="true" scope="col">Cod.</th> 
                                 <th class="rowWidth" scope="col">Imagen</th>
                                 <th style="width: 60%" scope="col">Descripción</th>
                                 <th hidden="true" scope="col">CodCamp</th>

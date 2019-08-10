@@ -19,7 +19,7 @@
         <title>+ - Producto</title>
     </head>
     <body background="Image/prueba.jpg">
-        <nav id='nav' class="navbar navbar-dark fixed-top">
+        <nav id='nav' class="navbar navbar-dark">
 
             <a href="Tona.jsp" id="TONA" class="navbar-brand">TONA</a>
             <a href="Login.jsp" class="navbar-brand"><img id="img" src="Image/maniqui1.png"></a>
@@ -49,11 +49,11 @@
                             </div>
                         </div>-->
         </nav>
-        <div class="modals">
-            <div class="container-fluid">
+<!--        <div class="modals">-->
+<div class="container-fluid" id="nvoproducto">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h3 id="encabezado" class="modal-title ">Nuevo Producto</h3>
+                        <h3 id="encabezado" class="modal-title ">NUEVO PRODUCTO</h3>
                     </div>
                     <div class="modal-body">
                         <form method="post" action="AddProd" enctype="multipart/form-data" onsubmit="return newProducto()">
@@ -70,10 +70,11 @@
                                             <div class="input-group-prepend">
                                                 <span class="input-group-text input-span">Imagen</span>
                                             </div>
-                                            <span class="logo" style="width: 0px">
+                                            <span class="logo" style="">
                                                 <input class="file-input logo" id="logo" type="file" name="logo" accept="image/*" onchange="loadFile(event)">
                                             </span>
-                                            <label for="logo" class="btn btn-outline-dark">
+                                            
+                                            <label for="logo" class="btn btn-outline-dark" id="uparchivo">
                                                 <span>Seleccionar el archivo</span>
                                             </label>
                                         </div>
@@ -95,13 +96,13 @@
                             </div>
 
                             <div class="modal-footer">
-                                <button type="submit" class="btn btn-outline-dark centrar">Guardar Producto</button>
+                                <button type="submit" id="save" class="btn btn-outline-dark centrar">Guardar Producto</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-        </div>
+        <!--</div>-->
 
 
         <!--        <div class="row">

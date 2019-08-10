@@ -1,6 +1,6 @@
 /*Encabezado*/
 #encabezado {background-color: #000; text-align: center; color: white; 
-             width: 100%; font-family: 'Lucida Console'; font-size: 1.5rem; 
+             width: 100%; font-family: 'Roboto', sans-serif; font-size: 1.5rem; 
              padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 20px;}
 #encabezado:hover {opacity: 0.8;}
 /*Filtros*/
@@ -63,6 +63,7 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
     color: white;
     font-size: 16px;
     padding: 16px 32px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /*---------------------------*/
@@ -107,19 +108,26 @@ div#imagen1:hover p#descripcion1 {margin-top: 75px;}*/
 }
 @media only screen and (min-width: 769px){
     .container{ 
-        width: 22%;
+        width: 21%;
         display: inline-block;
         margin-bottom: 10px;
     }
 }
 @media only screen and (min-width: 1023px){
     .container{ 
-        width: 27%;
+        width: 23%;
         display: inline-block;
         margin-bottom: 10px;
     }
 }
 @media only screen and (min-width: 1439px){
+    .container{ 
+        width: 21%;
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+@media only screen and (min-width: 1900px){
     .container{ 
         width: 15%;
         display: inline-block;
