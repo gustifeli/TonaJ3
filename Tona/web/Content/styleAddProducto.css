@@ -9,10 +9,10 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 .btn-default:hover, .btn-default:active {background-color: black; color: white;}
 #txt {color: white; padding-top: 15px;}
 #aMenu {text-align: right;}
-.rowWidth{ width: 10%; }
-.modals{margin-top: 2%; height: 70%;}
-.rowWidth{ width: 30px; }
-.modals{margin-top: 120px; height: 70%;}
+/*.rowWidth{ width: 10%; }*/
+/*.modals{margin-top: 2%; height: 70%;}*/
+/*.rowWidth{ width: 30px; }*/
+.container-fluid{margin-top: 5px;}
 .labelSize{font-size: medium; font-weight: normal;}
 .btn-transparente{ background-color: transparent;}
 .centrar{ margin-left: auto; margin-right: auto;}
@@ -24,15 +24,15 @@ body,html{height: 100%; width: 100%; padding: 0; margin: 0;}
 }*/
 /*style btn agregar producto*/
 
-
+td{color: black; font-weight: 500;}
 
 .btn-agregar{float: right; display: inline-block !Important; margin-top: 5px; margin-bottom: 5px}
 .input-group{margin-bottom: 10px;}
 .input-span{height: min-content;}
 
 /*encabezado producto*/
-#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-bottom: 0.5%;}
-#encabezadoAdmin {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Coco Gothic'; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-top: 120px; margin-bottom: 0.5%;}
+#encabezado {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Roboto', sans-serif; font-size: 1.5rem; padding-top: 3px; letter-spacing: 3px; margin-bottom: 0.5%;}
+#encabezadoAdmin {background-color: #000; text-align: center; color: white; width: 100%; font-family: 'Roboto', sans-serif; font-size: 1.5rem; letter-spacing: 3px; margin-top: 20px; padding-top: 3px}
 /*|---------------------------------|*/
 /*|       STYLE EDITPRODUCTO        |*/
 /*|---------------------------------|*/
@@ -54,19 +54,42 @@ input.form-control[type=text]{background: transparent; width: 150px; border: 1px
 /*|-----------------------------------|*/
 /*|    STYLE ADDPRODUCT IMPUTFILE     |*/
 /*|-----------------------------------|*/
-.logo {visibility: hidden;  width: 0px; position: relative;}
+.logo {visibility: hidden;  width: 10px; position: relative;}
 @media screen and (max-width: 1025px) {.input-group-sm {display: none;}}
 @media only screen and (min-width: 1024px) {#btn-circle {display:none;}}
 #btn-circle{color: white; background: transparent; border: 0.5px solid white; width: 30px; height: 30px; border-radius: 999em; padding: 2px 2px; margin-left: auto;}
 #btn-circle:hover:active{color: black; background: white;}
 .table-wrapper-scroll-y{
     display: block;
-    max-height: 700px;
+    
     overflow-y: scroll;
     -ms-overflow-style: -ms
 }
-.fixed-table-header{
+/*.fixed-table-header{
     position: fixed;
-}
+}*/
 #btnModif{width: 50px; height: 40px;}
 #btnEliminar{width: 50px; height: 40px;}
+@media only screen and (min-width: 768px) {
+    .panel-group{
+        overflow-y: hidden;
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 768px){
+#nvoproducto {
+    width: 100%;
+    margin-bottom: 28%;
+}
+#uparchivo{
+    width: 70%;
+    margin-left: 15px;
+ }
+}
+
+#uparchivo:hover{
+    color: white;
+}
+#save:hover{
+    color: white;
+}
