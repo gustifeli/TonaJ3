@@ -120,7 +120,7 @@
                             <div class="form-group">
                                 <label>Mensaje</label>
                                 <div class="consulta-msj">
-                                    <input name="msj" id="msj" type="text"  class="form-control inp" disabled="true" >
+                                    <input name="msj" id="msj" type="text"  class="form-control inp" readonly="readonly">
                                     <textarea class="form-control txtarea" name="comentario" rows="3" cols="40" id="comentario"></textarea>
                                 </div>
                                 <small class="form-text txt-obligatorio">*Campo Obligatorio</small>
