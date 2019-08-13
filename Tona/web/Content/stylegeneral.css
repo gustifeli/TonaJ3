@@ -11,7 +11,7 @@
 /*Style botones producto y contacto*/
 .txtbtn {color: #FFF; font-size: 16px; font-family: Ebrima,sans-serif;}
 /* Indicador de Carousel*/
-.carousel-indicators {top: 87%;}
+.carousel-indicators {top: 85%;}
 /*Style menu Galeria y Contacto*/
 .aTxtColor:hover {color: white; text-decoration: none;}
 .aTxtColor {color: white;}
@@ -34,7 +34,7 @@ div.upload input { display: block !important; width: 157px !important; height: 5
                 background-color: #000;
                 overflow-x: hidden;
                 transition: 0.5s;
-                padding-top: 60px;
+                padding-top: 40px;
             }
 
             .sidenav a {
@@ -62,7 +62,7 @@ div.upload input { display: block !important; width: 157px !important; height: 5
             }
 
             @media screen and (max-height: 450px) {
-                .sidenav {padding-top: 15px;}
+                .sidenav {padding-top: 10px;}
                 .sidenav a {font-size: 18px;}
             }
             #menus{color: #FFF;}

@@ -88,11 +88,6 @@
                 </div>
     
             </div></center>-->
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
 
     <!--        <div class="container-fluid justify-content-center">
@@ -114,7 +109,7 @@
             </div>-->
 
 
-    <nav id="nav" class=" navbar-inverse fixed-bottom">
+    <nav id="nav" class=" navbar-inverse">
         <div id="txtfooter">
             <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
             <div class="text-center img">
