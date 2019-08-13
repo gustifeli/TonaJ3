@@ -120,7 +120,7 @@
                             <div class="form-group">
                                 <label>Mensaje</label>
                                 <div class="consulta-msj">
-                                    <input name="msj" id="msj" type="text"  class="form-control inp" disabled="true" >
+                                    <input name="msj" id="msj" type="text"  class="form-control inp" readonly="readonly">
                                     <textarea class="form-control txtarea" name="comentario" rows="3" cols="40" id="comentario"></textarea>
                                 </div>
                                 <small class="form-text txt-obligatorio">*Campo Obligatorio</small>
@@ -164,7 +164,7 @@
 
     <nav id="nav" class=" navbar-inverse">
         <div id="txtfooter">
-            <p class="text-center credit txtbtn">- TONA - Santa Eufemia, Cordoba, Argentina</p>
+            <p class="text-center credit txtbtn"> | TONA | Córdoba, Argentina</p>
             <div class="text-center img">
                 <a href="https://www.instagram.com/t.o.n.aa/?hl=es"> <img src="Image/Instagram.png"></a>
                 <a href="https://www.facebook.com/TONAAOFICIAL/?pnref=story"> <img src="Image/facebook.png"></a>

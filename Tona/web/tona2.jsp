@@ -57,7 +57,7 @@
             <footer class="footer">
                 <nav id="nav" class=" navbar-inverse fixed-bottom">
                     <div id="txtfooter">
-                        <p class="text-center credit txtbtn"> - TONA - Santa Eufemia, Cordoba, Argentina</p>
+                        <p class="text-center credit txtbtn"> | TONA | Córdoba, Argentina</p>
                         <div class="text-center img">
                             <a href="https://www.instagram.com/t.o.n.aa/?hl=es"> <img src="Image/Instagram.png"></a>
                             <a href="https://www.facebook.com/TONAAOFICIAL/?pnref=story"> <img src="Image/facebook.png"></a>

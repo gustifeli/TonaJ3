@@ -1,7 +1,7 @@
 /*Fondo*/
 #htmlTona {background: black;}
 /*Texto footer sta... NO REALIZA NINGUNA FUNCION*/
-#txtfooter {color: white; vertical-align: middle;}
+#txtfooter {color: white; vertical-align: middle; font-family: 'Roboto',sans-serif;}
 /* navbar superior*/
 #nav {margin: auto; padding: 10px; background-color: black; border-radius: 0px; width: 100%;}
 /*img maniqui TONA*/
